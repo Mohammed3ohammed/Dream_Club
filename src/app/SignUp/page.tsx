@@ -3,8 +3,8 @@ import React from 'react';
 const SignUp = () => {
 return (
     <div className="flex justify-center items-center h-screen">
-       <div className="flex flex-col justify-evenly items-center  w-4/12 h-3/5 bg-zinc-900 rounded-3xl">
-       <h1 className='text-2xl'>Sign Up !</h1>
+       <div className="flex flex-col justify-evenly items-center  w-11/12 h-3/5 bg-zinc-900 rounded-3xl sm:w-9/12 md:w-6/12 lg:w-4/12 sm-h-4/5">
+       <h1 className='text-2xl mt-3'>Sign Up !</h1>
        <form className="flex flex-col text-xl mb-8"> 
         <label className="mb-2 mt-8">
          Name
