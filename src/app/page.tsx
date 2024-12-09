@@ -1,8 +1,13 @@
+import SignIn from "./components/SignIn";
 
-export default function Home() {
+
+const  Home = () => {
   return (
-    <>
-    <h1>Hello World</h1>
-    </>
+      <div>
+          <SignIn />
+          
+      </div>    
   );
-}
+};
+
+export default Home;
