@@ -32,6 +32,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-//className="flex text-black gap-5 lg:gap-10 "
