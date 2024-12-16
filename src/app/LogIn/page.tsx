@@ -21,11 +21,12 @@ const  LogIn = () => {
           </label>
         <input className="w-80 mb-4 h-8 bg-zinc-700 rounded-md focus:outline-transparent" type="password" required  />
        
-        <Link href="/">
+        
         <button type="submit" className="w-full mt-3  text-xl p-1  bg-green-400 text-white rounded-lg font-semibold h-8"> 
+        <Link href="/">
         Login in
-        </button>
         </Link>
+        </button>
           
         <Link href="/SignUp" className="mt-4 text-xl text-blue-700 sm:text-lg ">
         Create on account ?
