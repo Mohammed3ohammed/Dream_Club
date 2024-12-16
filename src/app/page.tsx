@@ -62,7 +62,7 @@ const  Home = () => {
             </div>
  
             {/* Section 2 */}
-            <div className='bg-slate-200 mt-80'>
+            <div className='bg-slate-200 mt-72 p-10'>
               <h1 className='text-center text-black pt-8 text-2xl'>FITNESS EXPERT</h1>
               <p className='text-zinc-500 text-center w-auto mt-3'>Dignissimos asperiores vitae velit veniam totam fug molestias accusamus alias <br /> autem provident. Odit ab aliquam dolor eius </p>
               <div className='grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 '>
