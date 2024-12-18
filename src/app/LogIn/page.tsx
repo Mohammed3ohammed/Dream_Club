@@ -23,7 +23,7 @@ const  LogIn = () => {
        
         
         <button type="submit" className="w-full mt-3  text-xl p-1  bg-green-400 text-white rounded-lg font-semibold h-8"> 
-        <Link href="/">
+        <Link href="/home">
         Login in
         </Link>
         </button>
