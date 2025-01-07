@@ -5,9 +5,9 @@ import Link from "next/link";
 const  LogIn = () => {
   return (
       <div className="flex justify-center items-center h-screen ">
-           <div className="flex flex-col justify-evenly items-center   w-11/12 h-3/5 bg-zinc-900 rounded-3xl sm:w-9/12 md:w-6/12 lg:w-4/12 sm-h-4/5">
-            <Image className="w-24 h-24  md:w-28 md:h-28 rounded-full block mt-5" src={logo} alt="Logo"  /> 
-            <h1 className= "text-2xl ">Login in to Dream Club</h1>
+           <div className="flex flex-col justify-evenly items-center   w-11/12 h-auto bg-zinc-900 rounded-3xl sm:w-9/12 md:w-6/12 lg:w-4/12 sm-h-4/5">
+            <Image className="w-20 h-20  md:w-24 md:h-24 rounded-full block mt-5" src={logo} alt="Logo"  /> 
+            <h1 className= "text-2xl mt-5">Login in to Dream Club</h1>
      <form className="flex flex-col text-base mb-8 sm:text-xl p-1" action="" method="POST"> 
         <label className="mb-2 mt-8 ">
            Email address

@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav>
 
-          <div className="bg-white h-20 flex justify-around items-center px-4 md:px-10 lg:px-20">
+          <div className="bg-white opacity-95 h-20 flex justify-around items-center px-4 md:px-10 lg:px-20 ">
             <h1 className="text-black text-xl">Dream Club</h1>
             <div 
           className="md:hidden text-black cursor-pointer"

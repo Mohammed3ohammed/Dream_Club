@@ -12,14 +12,14 @@ const page = () => {
        <div className='flex justify-center gap-8 '>
        <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10'>
 
-        <Image src={imge1} alt='Image' className='w-80 h-96 rounded-2xl' />
-            <h2 className='text-4xl mt-5'>كابتن عبد الرحمان عرقوب</h2>
-            <p className='w-96 text-2xl text-center mt-2'>معيد فى كلية تربيه رياضيه جامعة الاسكندرية</p>
-            <p className='w-96 text-2xl mt-2'>
+        <Image src={imge1} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
+            <h2 className='text-3xl mt-8'>كابتن عبد الرحمان عرقوب</h2>
+            <p className='w-96  text-lg text-center mt-2'>معيد لدي كلية تربيه رياضيه جامعة الاسكندرية</p>
+            <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>
             متخصص في تأهيل الإصابات الرياضية وتدريب الكونغ فو. بخبرة تمتد لسنوات في هذا المجال، أقدم برامج تدريب وتأهيل مخصصة لكل فرد، تهدف إلى استعادة القوة والمرونة بعد الإصابات، مع تحسين الأداء البدني.
             أعمل أيضًا على تدريب المهارات القتالية وتعزيز الأداء الرياضي في الكونغ فو بمستوى احترافي. أضمن تقديم خطة تدريب متكاملة تعتمد على أحدث الأساليب لضمان تطور ملحوظ ومستدام
             </p>
-            <button className='border-solid border-2 border-red-400 rounded-full w-32 p-2 mt-5'><a href="/service/sub">اشترك الان</a></button>
+            <button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition cursor-pointer'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
 
@@ -27,14 +27,14 @@ const page = () => {
 
 <div className='flex justify-center gap-8 '>
        <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10'>
-        <Image src={imge2} alt='Image' className='w-80 h-96 rounded-2xl' />
-            <h2 className='text-4xl mt-5'>كابتن عاصم القصبي</h2>
-            <p className='w-96 text-2xl text-center mt-2'>كلية تربيه رياضية جامعة القاهره</p>
-            <p className='w-96 text-2xl mt-2'>
+        <Image src={imge2} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
+            <h2 className='text-3xl mt-8'>كابتن عاصم القصبي</h2>
+            <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة القاهره</p>
+            <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>
             متخصص في تأهيل الإصابات الرياضية وتدريب الكونغ فو. بخبرة تمتد لسنوات في هذا المجال، أقدم برامج تدريب وتأهيل مخصصة لكل فرد، تهدف إلى استعادة القوة والمرونة بعد الإصابات، مع تحسين الأداء البدني.
             أعمل أيضًا على تدريب المهارات القتالية وتعزيز الأداء الرياضي في الكونغ فو بمستوى احترافي. أضمن تقديم خطة تدريب متكاملة تعتمد على أحدث الأساليب لضمان تطور ملحوظ ومستدام
             </p>
-        <button className='border-solid border-2 border-red-400 rounded-full w-32 p-2 mt-5'><a href="/service/sub">اشترك الان</a></button>
+        <button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}
@@ -42,12 +42,13 @@ const page = () => {
        <div className='flex justify-center gap-8 '>
        <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10'>
 
-        <Image src={imge3} alt='Image' className='w-80 h-96 rounded-2xl' />
-            <h2 className='text-4xl mt-5'>كابتن على القصبي</h2>
-            <p className='w-96 text-2xl text-center mt-2'>كلية تربيه رياضية جامعة القاهرة</p>
-            <p className='w-96 text-2xl mt-2'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
-أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة</p>
-<button className='border-solid border-2 border-red-400 rounded-full w-32 p-2 mt-5'><a href="/service/sub">اشترك الان</a></button>
+        <Image src={imge3} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
+            <h2 className='text-3xl mt-8'>كابتن على القصبي</h2>
+            <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة القاهرة</p>
+            <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
+أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة
+</p>
+<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}
@@ -55,12 +56,12 @@ const page = () => {
        <div className='flex justify-center gap-8 '>
        <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10'>
 
-        <Image src={imge4} alt='Image' className='w-80 h-96 rounded-2xl' />
-            <h2 className='text-4xl mt-5'>كابتن  محمد القصبى</h2>
-            <p className='w-96 text-2xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندرية</p>
-            <p className='w-96 text-2xl mt-2'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
+        <Image src={imge4} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
+            <h2 className='text-3xl mt-8'>كابتن  محمد القصبى</h2>
+            <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندرية</p>
+            <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
 أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة</p>
-<button className='border-solid border-2 border-red-400 rounded-full w-32 p-2 mt-5'><a href="/service/sub">اشترك الان</a></button>
+<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
     </div>
@@ -68,12 +69,12 @@ const page = () => {
     <div className='flex justify-center gap-8 '>
        <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10'>
 
-        <Image src={imge1} alt='Image' className='w-80 h-96 rounded-2xl' />
-            <h2 className='text-4xl mt-5'>كابتن عبد الرحمان منتصر</h2>
-            <p className='w-96 text-2xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
-            <p className='w-96 text-2xl mt-2'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
+        <Image src={imge1} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
+            <h2 className='text-3xl mt-8'>كابتن عبد الرحمان منتصر</h2>
+            <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
+            <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
 أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة</p>
-<button className='border-solid border-2 border-red-400 rounded-full w-32 p-2 mt-5'><a href="/service/sub">اشترك الان</a></button>
+<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}
