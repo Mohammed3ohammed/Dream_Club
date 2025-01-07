@@ -11,7 +11,7 @@ return (
           </label>
         <input type="text" 
         required 
-        className="w-80 h-8  bg-zinc-700 rounded-md focus:border-indigo-800 "  
+        className="w-80 h-8  bg-zinc-700 rounded-md focus:border-indigo-800"  
          />
         <label className="mb-2 mt-8">
           Email address
@@ -31,7 +31,7 @@ return (
           Password
           </label>
         <input className="w-80 mb-4 h-8 bg-zinc-700 rounded-md focus:outline-transparent" type="password" required  />
-        <button type="submit" className="w-full mt-3  text-xl p-1  bg-green-400 text-white rounded-lg font-semibold h-8"> 
+        <button type="submit" className="w-full mt-3  text-xl p-1  bg-green-400 text-white rounded-lg font-semibold h-auto"> 
           Sign in
           </button>
         

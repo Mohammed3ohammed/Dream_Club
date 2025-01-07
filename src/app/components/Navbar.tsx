@@ -19,9 +19,9 @@ const Navbar = () => {
               <span className="text-2xl">&#9776;</span>
             </div>
             <ul className={`${isMenuOpen ? "block" : "hidden"} absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent md:flex text-black gap-5 lg:gap-10 p-4 md:p-0 z-10 text-right`} >
-              <Link href="/"><li className="text-red-700 py-1 md:py-0 mt-1 sm:mt-0">Home</li></Link>
+              <Link href="/home"><li className="text-red-700 py-1 md:py-0 mt-1 sm:mt-0">Home</li></Link>
               <Link href="/about"><li className="py-1 md:py-0 mt-1 sm:mt-0">About</li></Link>
-              <Link href="/services"><li className="py-1 md:py-0 mt-1 sm:mt-0">Services</li></Link>
+              <Link href="/service"><li className="py-1 md:py-0 mt-1 sm:mt-0">Services</li></Link>
               <Link href="/contact"><li className="py-1 md:py-0 mt-1 sm:mt-0">Contact</li></Link>
             
             </ul>
