@@ -8,7 +8,7 @@ const Footer = () => {
     <h1 className="text-3xl font-bold">A LITTLE ABOUT STAMINA.</h1>
     <p className="w-full sm:w-96 mt-3 leading-relaxed">Stamina is the ability to sustain prolonged physical or mental effort. it involves cardlovascular and muscular endurance,
         allowing you to perform activities for longer without tiring. Regular exercise improvesstamina.  </p>
-        <button className="mt-3 border-solid border-orange-700 border-2 p-2 rounded-full bg-orange-600 w-full sm:w-72">Become A Member</button>
+        <button className="mt-3 border-solid border-orange-700 border-2 p-2 rounded-full bg-orange-600 w-full sm:w-72"><a href="/service/sub">Become A Member</a></button>
         </div>
         
         <div className="flex flex-col  items-center cursor-pointer">
@@ -47,7 +47,7 @@ const Footer = () => {
             </a>
             </span>
             <span>
-                <Link href="">
+                <Link href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.5" stroke="currentColor" className="size-8 text-orange-500">
                 <path line-cap="round" line-join="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
