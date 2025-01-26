@@ -4,7 +4,8 @@ import imge1 from"../../../public/Captins/Image1.jpg";
 import imge2 from"../../../public/Captins/Image2.jpg";
 import imge3 from"../../../public/Captins/Image3.jpg";
 import imge4 from"../../../public/Captins/Image4.jpg";
- import imge5 from"../../../public/Captins/Image5.jpg";
+import imge5 from"../../../public/Captins/Image5.jpg";
+import imge6 from"../../../public/Captins/Image6.png";
 
 const page = () => {
   return (
@@ -82,7 +83,7 @@ const page = () => {
     <div className='flex justify-center gap-8' dir='rtl'>
        <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10'>
 
-        <Image src={imge2} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
+        <Image src={imge6} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
             <h2 className='text-3xl mt-8'>كابتن بسملة رضا</h2>
             <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
@@ -95,7 +96,7 @@ const page = () => {
     <div className='flex justify-center gap-8' dir='rtl'>
        <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10'>
 
-        <Image src={imge2} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
+        <Image src={imge6} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
             <h2 className='text-3xl mt-8'>كابتن رنيم كمال</h2>
             <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
@@ -108,7 +109,7 @@ const page = () => {
     <div className='flex justify-center gap-8' dir='rtl'>
        <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10'>
 
-        <Image src={imge2} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
+        <Image src={imge6} alt='Image' className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-110 animate-bounceLight cursor-pointer' />
             <h2 className='text-3xl mt-8'>كابتن الأء العبد</h2>
             <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.

@@ -22,23 +22,24 @@ import imge12 from "./Image/imag12.jpg";
 import imge13 from "./Image/imag13.jpg";
 import imge14 from "./Image/imag14.jpg";
 import imge15 from "./Image/imag15.jpg";
+import imge16 from "./Image/imge16.jpg";
 // 
 
 const  Home = () => {
   return (
           <>
           <div>
-            <Image className='w-full h-[50vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh] object-cover' src={img1} alt="" />
-        <div className='grid  grid-cols-1 md:grid-cols-4 lg:grid-cols-4 p-4 gap-6 h-96 '>
+            <Image className="w-full max-h-[700px] object-cover" src={img1} alt="" />
+        <div className='grid  grid-cols-1 md:grid-cols-4 lg:grid-cols-4 p-4 gap-6 h-auto md:h-[500] lg:h- '>
     <div className='flex justify-center items-center'>
-        <div className='bg-white w-full  md:w-80 lg:w-80 rounded-2xl p-3'>
+        <div className='bg-white w-full h-[350px]  md:w-80 lg:w-80 rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
             <Image src={logo1} alt="" className="w-16 h-16 " />
       <h1 className="border-b-2 border-solid border-orange-500 p-3">WEGHT LIFTING</h1>
             <p className='p-6'>Dignissimos asperiores vitae velit veniam totarn fuga molestias accusamus alias autem provident. odit ab aliquam dolor eius</p>
           <a href='/contact'>
-          <button className='flex border-2  border-solid p-3 rounded-full border-orange-500 text-orange-500'>
-              More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.5" stroke="currentColor" className="size-6 ml-4">
+          <button className='flex border-2  border-solid p-2 rounded-full border-orange-500 text-orange-500 w-32 mt-5'>
+              More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.5" stroke="currentColor" className="size-6 ">
           <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
           </svg>
           </button>
@@ -48,13 +49,14 @@ const  Home = () => {
         </div>  
 
     <div className='flex justify-center items-center'>
-        <div className='bg-white w-full  md:w-80 lg:w-80 flex justify-center rounded-2xl p-3'>
+        <div className='bg-white w-full  h-[350px] md:w-80 lg:w-80 flex justify-center rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
           <Image src={logo2} alt="" className='w-16 h-16' />
-      <h1 className="border-b-2 border-solid border-orange-500 p-3">RUNING</h1>
-            <p className='p-6' >Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
+      <h1 className="border-b-2 border-solid border-orange-500 p-3">Cardio</h1>
+            <p className='p-6' >
+            Cardio exercises, like running, are essential for improving heart health, burning calories, and boosting overall energy levels.</p>
            <a href='/contact'>
-           <button className='flex border-2  border-solid p-3 rounded-full border-orange-500 text-orange-500'>
+           <button className='flex border-2  border-solid p-2 rounded-full border-orange-500 text-orange-500 w-32'>
             More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.5" stroke="currentColor" className="size-6 ml-4">
           <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
           </svg>
@@ -65,13 +67,15 @@ const  Home = () => {
         </div>  
 
     <div className='flex justify-center items-center'>
-        <div className='bg-white w-full  md:w-80 lg:w-80 flex justify-center rounded-2xl p-3'>
+        <div className='bg-white w-full h-[350px]  md:w-80 lg:w-80 flex justify-center rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
           <Image src={logo2} alt="" className='w-16 h-16' />
-      <h1 className="border-b-2 border-solid border-orange-500 p-3">RUNING</h1>
-            <p className='p-6' >Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
+      <h1 className="border-b-2 border-solid border-orange-500 p-3">Injury Rehabilitation</h1>
+            <p className='p-6' >
+              Injury rehabilitation involves a series of exercises and treatments to restore strength, flexibility, and function after an injury, helping to prevent future problems.
+            </p>
            <a href='/contact'>
-           <button className='flex border-2  border-solid p-3 rounded-full border-orange-500 text-orange-500'>
+           <button className='flex border-2  border-solid p-2 rounded-full border-orange-500 text-orange-500 w-32'>
             More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.5" stroke="currentColor" className="size-6 ml-4">
           <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
           </svg>
@@ -83,13 +87,15 @@ const  Home = () => {
 
 
  <div className='flex justify-center items-center '>
-        <div className='bg-white w-full  md:w-80 lg:w-80 flex justify-center rounded-2xl p-3'>
+        <div className='bg-white w-full h-[350px]  md:w-80 lg:w-80 flex justify-center rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
           <Image src={logo3} alt="" className='w-16 h-16' />
-      <h1 className="border-b-2 border-solid border-orange-500 p-3">YOGA</h1>
-            <p className='p-6'>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ad aliquam dolor eius</p>
+      <h1 className="border-b-2 border-solid border-orange-500 p-3">RUNING</h1>
+            <p className='p-6'>
+            Running offers numerous benefits, including improved cardiovascular health, increased stamina, and enhanced mental well-being.
+            </p>
             <a href='/contact'>
-            <button className='flex border-2  border-solid p-3 rounded-full border-orange-500 text-orange-500'>
+            <button className='flex border-2  border-solid p-2 w-32 rounded-full border-orange-500 text-orange-500'>
               More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  width="1.5" stroke="currentColor" className="size-6 ml-4">
           <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
           </svg>
@@ -178,83 +184,33 @@ const  Home = () => {
                 </div>  
                 </div> 
                 {/*  */}
-                <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-3  bg-white'>
-                  <div className='flex justify-center items-center flex-col'>
-                    <Image src={imge1} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>ماس مكمل غذائي</p>
-                    <span className='text-black text-center'>3000 جنية </span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge2} alt='' className='w-32 h-32 ' />
-                    <p className='text-black mt-3'>واي بروتين مكمل غذائي</p>
-                    <span className='text-black'>4000 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge3} alt=''  className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>كرياتين أون</p>
-                    <span className='text-black'>1900 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge4} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>ريد ريكس كرياتين</p>
-                    <span className='text-black'>1000 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge5} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>كرياتين </p>
-                    <span className='text-black'>1200 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge6} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>شيكر</p>
-                    <span className='text-black'>250 جنيه</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge7} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>شيكر</p>
-                    <span className='text-black'>400 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge8} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>حزام ضهر </p>
-                    <span className='text-black'>400 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge9} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>جونت جيم رجالي</p>
-                    <span className='text-black'>150 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge10} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>جونت جيم حريمي</p>
-                    <span className='text-black'>150 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge11} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>قلفز كونغوفو</p>
-                    <span className='text-black'>200 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge12} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>قلفز كونغوفو</p>
-                    <span className='text-black'>400 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge13} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'> حزام تاهيل اصابات </p>
-                    <span className='text-black'>400 جنية</span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge14} alt='' className='w-40 h-40 ' />
-                    <p className='text-black mt-3'>واقي قدم </p>
-                    <span className='text-black'>300 جنية </span>
-                  </div>
-                  <div className='flex justify-center items-center flex-col p-5'>
-                    <Image src={imge15} alt='' className='w-40 h-40' />
-                    <p className='text-black mt-3'>واقي راس</p>
-                    <span className='text-black'>300 جنية</span>
-                  </div>
-                </div>
+
+<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-3 bg-white">
+  {[ 
+    { img: imge1, name: 'ماس مكمل غذائي', price: '3000  جنية' },
+    { img: imge2, name: 'واي بروتين مكمل غذائي', price: '4000 جنية' },
+    { img: imge3, name: 'كرياتين أون', price: '1900 جنية' },
+    { img: imge4, name: 'ريد ريكس كرياتين', price: '1000 جنية' },
+    { img: imge5, name: 'كرياتين', price: '1200 جنية' },
+    { img: imge6, name: 'شيكر', price: '250 جنيه' },
+    { img: imge7, name: 'شيكر', price: '400 جنية' },
+    { img: imge8, name: 'حزام ضهر', price: '400 جنية' },
+    { img: imge9, name: 'جونت جيم رجالي', price: '150  جنية' },
+    { img: imge10, name: 'جونت جيم حريمي', price: '150 جنية' },
+    { img: imge11, name: 'قلفز كونغوفو', price: '200 جنية' },
+    { img: imge12, name: 'قلفز كونغوفو', price: '400 جنية' },
+    { img: imge13, name: 'حزام تاهيل اصابات', price: '400 جنية' },
+    { img: imge14, name: 'واقي قدم', price: '300 جنية' },
+    { img: imge15, name: 'واقي راس', price: '300 جنية' },
+    { img: imge16, name: 'مياه معدنيه', price: '10 جنية' },
+  ].map((item, index) => (
+    <div key={index} className="flex justify-center items-center flex-col p-5">
+      <Image src={item.img} alt={item.name} className="w-28 h-28" />
+      <p className="text-black mt-3">{item.name}</p>
+      <span className="text-black">{item.price}</span>
+    </div>
+  ))}
+</div>
                 {/*  */}
               </>    
   );

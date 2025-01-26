@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import logo from "../../../../public/Image/img2.jpg";
+import logo from "../../../../Image/logo.jpg";
 
 const page = () => {
   return (

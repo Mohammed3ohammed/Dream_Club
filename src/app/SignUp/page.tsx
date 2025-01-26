@@ -6,12 +6,17 @@ return (
        <div className="flex flex-col justify-evenly items-center  w-11/12 h-auto bg-zinc-900 rounded-3xl sm:w-9/12 md:w-6/12 lg:w-4/12 sm-h-4/5">
        <h1 className='text-2xl mt-3'>Sign Up !</h1>
        <form className="flex flex-col text-xl mb-8"> 
+       <select className="bg-zinc-700 mt-4 h-10  border text-white border-gray-300 rounded-md p-2 border-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+  <option >Admin</option>
+  <option >Coach</option>
+  <option >Client</option>
+</select>
         <label className="mb-2 mt-8">
          Name
           </label>
         <input type="text" 
         required 
-        className="w-80 h-8  bg-zinc-700 rounded-md focus:border-indigo-800"  
+        className="w-80 h-auto  bg-zinc-700 rounded-md focus:border-indigo-800"  
          />
         <label className="mb-2 mt-8">
           Email address
