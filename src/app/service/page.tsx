@@ -21,7 +21,7 @@ const page = () => {
             متخصص في تأهيل الإصابات الرياضية وتدريب الكونغ فو. بخبرة تمتد لسنوات في هذا المجال، أقدم برامج تدريب وتأهيل مخصصة لكل فرد، تهدف إلى استعادة القوة والمرونة بعد الإصابات، مع تحسين الأداء البدني.
             أعمل أيضًا على تدريب المهارات القتالية وتعزيز الأداء الرياضي في الكونغ فو بمستوى احترافي. أضمن تقديم خطة تدريب متكاملة تعتمد على أحدث الأساليب لضمان تطور ملحوظ ومستدام
             </p>
-            <button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition cursor-pointer'><a href="/service/sub">اشترك الان</a></button>
+            <button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition cursor-pointer'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
 
@@ -36,7 +36,7 @@ const page = () => {
             متخصص في تأهيل الإصابات الرياضية وتدريب الكونغ فو. بخبرة تمتد لسنوات في هذا المجال، أقدم برامج تدريب وتأهيل مخصصة لكل فرد، تهدف إلى استعادة القوة والمرونة بعد الإصابات، مع تحسين الأداء البدني.
             أعمل أيضًا على تدريب المهارات القتالية وتعزيز الأداء الرياضي في الكونغ فو بمستوى احترافي. أضمن تقديم خطة تدريب متكاملة تعتمد على أحدث الأساليب لضمان تطور ملحوظ ومستدام
             </p>
-        <button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
+        <button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}
@@ -50,7 +50,7 @@ const page = () => {
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
 أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة
 </p>
-<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
+<button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}
@@ -63,7 +63,7 @@ const page = () => {
             <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندرية</p>
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
 أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة</p>
-<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
+<button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
          {/*  */}
@@ -75,7 +75,7 @@ const page = () => {
             <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
 أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة</p>
-<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
+<button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}
@@ -88,7 +88,7 @@ const page = () => {
             <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
 أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة</p>
-<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
+<button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}
@@ -101,7 +101,7 @@ const page = () => {
             <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
 أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة</p>
-<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
+<button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}
@@ -114,7 +114,7 @@ const page = () => {
             <p className='w-96 text-xl text-center mt-2'>كلية تربيه رياضية جامعة الاسكندريه</p>
             <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة.
 أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة</p>
-<button className='border-solid border-2 border-red-400 rounded-full w-36 p-2 mt-5 hover:bg-red-950 transition'><a href="/service/sub">اشترك الان</a></button>
+<button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition'><a href="/service/sub">اشترك الان</a></button>
         </div>
        </div>
        {/*  */}

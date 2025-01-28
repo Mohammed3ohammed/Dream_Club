@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  // بيانات المشترك التجريبية
+
   const subscriberData = {
     id: 1,
     name: "محمد أحمد",
@@ -17,11 +17,11 @@ const page = () => {
   };
 
   return (
-    <div className="p-8 bg-gray-100 text-black min-h-screen">
-      <h1 className="text-4xl font-bold mb-8 text-center">لوحة تحكم المشترك</h1>
+    <div className="p-8  text-black min-h-screen" dir="rtl">
+      <h1 className="text-4xl font-bold mb-8 text-center text-white">لوحة تحكم المشترك</h1>
 
       {/* معلومات المشترك */}
-      <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
+      <div className="bg-black text-white p-6 rounded-lg shadow-lg mb-8" >
         <h2 className="text-2xl font-bold mb-4">معلومات المشترك</h2>
         <p className="mb-2">
           <strong>اسم المشترك:</strong> {subscriberData.name}
@@ -50,24 +50,24 @@ const page = () => {
       </div>
 
       {/* الجلسات المحجوزة */}
-      <div className="bg-white p-6 rounded-lg shadow-lg">
+      <div className="bg-black text-white p-6 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-4">الجلسات المحجوزة</h2>
         {subscriberData.sessions.length > 0 ? (
           <div className="overflow-x-auto">
-            <table className="table-auto w-full bg-white rounded-lg shadow-lg">
-              <thead className="bg-gray-200">
+            <table className="w-full bg-black rounded-lg shadow-lg">
+              <thead className="bg-white text-black">
                 <tr>
-                  <th className="px-4 py-2 text-left">التاريخ</th>
-                  <th className="px-4 py-2 text-left">الوقت</th>
-                  <th className="px-4 py-2 text-left">الحالة</th>
+                  <th className="">التاريخ</th>
+                  <th className="px-4 py-2">الوقت</th>
+                  <th className="px-4 py-2">الحالة</th>
                 </tr>
               </thead>
               <tbody>
                 {subscriberData.sessions.map((session, index) => (
                   <tr key={index} className="border-b">
-                    <td className="px-4 py-2">{session.date}</td>
-                    <td className="px-4 py-2">{session.time}</td>
-                    <td className="px-4 py-2">
+                    <td className="px-4 py-2 text-center">{session.date}</td>
+                    <td className="px-4 py-2 text-center">{session.time}</td>
+                    <td className="px-4 py-2 text-center">
                       <span
                         className={`px-3 py-1 rounded-full text-sm ${
                           session.status === "حضر"

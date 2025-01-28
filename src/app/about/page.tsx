@@ -19,8 +19,8 @@ const page = () => {
     const imges = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15];
   return (
     <>
-        <div className="flex flex-col justify-center items-center mt-10 p-2">
-        <h1 className="text-3xl text-gray-300">Deam Club لية تشترك فى</h1>
+        <div className="flex flex-col justify-center items-center mt-10 mb-10 p-2">
+        <h1 className="text-3xl text-orange-500 italic">Deam <span className="text-white">Club</span> لية تشترك فى</h1>
          <p className="w-fll p-4 md:w-5/12 lg:w-5/12 mt-2 text-gray-400 " dir="rtl">
           مكان هيغير حياتك ويوصلك لأهدافك الصحية والرياضية بطريقة ممتعة ومحترفة. لما تشترك معانا، هتستفيد 
         </p>

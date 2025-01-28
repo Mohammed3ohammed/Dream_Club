@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
  <div className=" grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 gap-5  p-5 ">
  <div className="flex flex-col items-center text-center ">
-    <h1 className="text-3xl font-bold">Dream Club</h1>
+    <h1 className="text-3xl text-orange-500 italic">Dream <span className="text-white">Club</span></h1>
     <p className="p-4  md:w-full w-96 mt-3 leading-relaxed">
     A place that will change your life and help you achieve your health and fitness goals in an enjoyable and professional way. When you join us, you will benefit..  </p>
         
@@ -23,6 +23,24 @@ const Footer = () => {
             <li><a href="/contact" className="hover:text-sky-600">Running</a></li>
         </ul>
         </div>
+        <div className="flex flex-col   mr-10" dir='rtl'>
+           <span >
+                <Link href="#" className="mb-5 ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="icons w-8 h-8 mb-2  transform transition duration-300 hover:scale-125">
+                <path fill="currentColor" d="M172.3 501.7C27 291 0 269.4 0 192 0 86 86 0 192 0s192 86 192 192c0 77.4-27 99-172.3 309.7-9.5 13.8-29.9 13.8-39.5 0zM192 272c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z"/>
+                </svg>
+               <p>الفرع الأول  ش - الحيار ابو المطامير البحيرة</p>
+                </Link>
+            </span>
+            <span>
+                <Link href="#" className="mb-5 mt-10">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="icons w-8 h-8 mb-2 mt-3 transform transition duration-300 hover:scale-125 ">
+                <path fill="currentColor" d="M172.3 501.7C27 291 0 269.4 0 192 0 86 86 0 192 0s192 86 192 192c0 77.4-27 99-172.3 309.7-9.5 13.8-29.9 13.8-39.5 0zM192 272c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z"/>
+                </svg>
+                      الفرع الثاني ش - خميس  ابو المطامير البحيرة
+                </Link>
+            </span>
+           </div>
     </div>
 
           <div  className="flex justify-center gap-10 mt-5">
@@ -53,25 +71,8 @@ const Footer = () => {
             </span>
           
           </div>
-          <div className="flex flex-col justify-end mr-10" dir='rtl'>
-           <span >
-                <Link href="#" className="mb-5 ">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="icons w-8 h-8 mb-2  transform transition duration-300 hover:scale-125">
-                <path fill="currentColor" d="M172.3 501.7C27 291 0 269.4 0 192 0 86 86 0 192 0s192 86 192 192c0 77.4-27 99-172.3 309.7-9.5 13.8-29.9 13.8-39.5 0zM192 272c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z"/>
-                </svg>
-               <p>الفرع الأول الحيار ابو المطامير البحيرة</p>
-                </Link>
-            </span>
-            <span>
-                <Link href="#" className="mb-5">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="icons w-8 h-8 mb-2 mt-3 transform transition duration-300 hover:scale-125 ">
-                <path fill="currentColor" d="M172.3 501.7C27 291 0 269.4 0 192 0 86 86 0 192 0s192 86 192 192c0 77.4-27 99-172.3 309.7-9.5 13.8-29.9 13.8-39.5 0zM192 272c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80z"/>
-                </svg>
-                      الفرع الثاني ش - خميس ابوالمطامير البحيره
-                </Link>
-            </span>
-           </div>
-           <p className="text-center text-xl p-4">Team P9  @جميع الحقوق محفوظة لدي  </p>
+          
+           <p className="text-center text-xl p-5">Team P9  @جميع الحقوق محفوظة لدي  </p>
     </footer>
   )
 }

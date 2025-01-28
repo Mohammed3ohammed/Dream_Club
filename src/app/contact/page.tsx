@@ -5,37 +5,37 @@ const Schedule = () => {
     { 
       day: "السبت", 
       men: "6:00 PM    -     1:00 AM", 
-      women: "9:00 AM  -      6:00 PM" 
+      women: "1:00 PM  -      6:00 PM" 
     },
     { 
       day: "الأحد", 
       men: "2:00 PM   -    1:00 AM", 
-      women: "9:00 AM  -     2:00 PM" 
+      women: "8:00 AM  -     2:00 PM" 
     },
     { 
       day: "الإثنين", 
       men: "6:00 PM -  1:00 AM", 
-      women: "9:00 AM - 6:00 PM" 
+      women: "1:00 PM - 6:00 PM" 
     },
     { 
       day: "الثلاثاء", 
       men: "2:00 PM -  1:00 AM", 
-      women: "9:00 AM - 2:00 PM" 
+      women: "8:00 AM - 2:00 PM" 
     },
     { 
       day: "الأربعاء", 
       men: "6:00 PM - 1:00 AM", 
-      women: "9:00 AM - 6:00 PM" 
+      women: "1:00 PM - 6:00 PM" 
     },
     { 
       day: "الخميس", 
       men: "2:00 PM -  2:00 AM", 
-      women: "9:00 AM - 2:00 PM" 
+      women: "8:00 AM - 2:00 PM" 
     },
     { 
       day: "الجمعة", 
       men: "مغلق", 
-      women: "9:00 AM - 9:00 PM" 
+      women: "2:00 PM - 6:00 PM" 
     },
   ];
 
@@ -56,7 +56,7 @@ const Schedule = () => {
         "Barbell Row (التجديف بالبار)",
         "Bicep Curls (البايسبس)",
       ],
-      days: "الأحد، الأربعاء، الجمعة",
+      days: "الأحد، الأربعاء،",
     },
     {
       type: "Legs (الأرجل)",
@@ -86,7 +86,7 @@ const Schedule = () => {
         "Hamstring Curls (تمارين أوتار الركبة)",
         "Leg Extensions (تمديد الأرجل)",
       ],
-      days: "الإثنين، الأربعاء، الجمعة",
+      days: "الإثنين، الأربعاء",
     },
     {
       type: "تأهيل إصابة الظهر",
@@ -110,7 +110,7 @@ const Schedule = () => {
       type: "تمارين القوة",
       exercises: ["تمارين الأوزان الحرة", "تمرين السكوات", "تمارين البطن"],
       goals: "بناء العضلات وزيادة القوة",
-      days: "الإثنين، الأربعاء، الجمعة",
+      days: "الإثنين، الأربعاء",
     },
     {
       type: "تمارين المرونة",
@@ -141,7 +141,7 @@ const Schedule = () => {
         "تمارين الدفاع (Blocking Techniques)",
       ],
       goals: "تطوير مهارات القتال وتقنيات الدفاع",
-      days: "الأحد، الثلاثاء، الخميس",
+      days: "الأحد، الثلاثاء",
     },
     {
       type: "تأمل وتوازن",
@@ -151,7 +151,7 @@ const Schedule = () => {
         "تمارين التوازن (Balance Training)",
       ],
       goals: "زيادة التركيز وتحسين التوازن",
-      days: "الجمعة",
+      days: "الخميس",
     },
   ];
 
@@ -173,7 +173,7 @@ const Schedule = () => {
               </thead>
               <tbody>
                 {schedule.map((entry, index) => (
-                  <tr key={index} className="border-b hover:bg-gray-100 hover:text-black">
+                  <tr key={index} className="border-b ">
                     <td className="px-4 py-2">{entry.day}</td>
                     <td className="px-4 py-2">{entry.men}</td>
                     <td className="px-4 py-2">{entry.women}</td>
@@ -200,7 +200,7 @@ const Schedule = () => {
               </thead>
               <tbody>
                 {schedul.map((entry, index) => (
-                  <tr key={index} className="border-b hover:bg-gray-100 hover:text-black">
+                  <tr key={index} className="border-b">
                     <td className="px-4 py-2">{entry.type}</td>
                     <td className="px-4 py-2">
                       <ul className="list-disc list-inside">
@@ -233,7 +233,7 @@ const Schedule = () => {
             </thead>
             <tbody>
               {fitnessPlan.map((entry, index) => (
-                <tr key={index} className="border-b hover:bg-gray-100 hover:text-black">
+                <tr key={index} className="border-b">
                   <td className="px-4 py-2">{entry.type}</td>
                   <td className="px-4 py-2">
                     <ul className="list-disc list-inside">
@@ -267,7 +267,7 @@ const Schedule = () => {
             </thead>
             <tbody>
               {rehabSchedule.map((entry, index) => (
-                <tr key={index} className="border-b hover:bg-gray-100 hover:text-black">
+                <tr key={index} className="border-b">
                   <td className="px-4 py-2">{entry.type}</td>
                   <td className="px-4 py-2">
                     <ul className="list-disc list-inside">
@@ -302,7 +302,7 @@ const Schedule = () => {
             </thead>
             <tbody>
               {kungFuSchedule.map((entry, index) => (
-                <tr key={index} className="border-b hover:bg-gray-100 hover:text-black">
+                <tr key={index} className="border-b">
                   <td className="px-4 py-2">{entry.type}</td>
                   <td className="px-4 py-2">
                     <ul className="list-disc list-inside">
