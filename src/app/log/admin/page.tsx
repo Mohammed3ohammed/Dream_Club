@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const page = () => {
@@ -32,10 +31,11 @@ const page = () => {
   return (
     <div className="p-8  min-h-screen">
       <h1 className="text-4xl font-bold mb-8 text-center">لوحة تحكم المدير</h1>
+
       <div className="overflow-x-auto">
-        <table className="table-auto w-full rounded-lg shadow-lg">
+        <table className="table-auto min-w-full border-collapse shadow-lg">
           <thead className="bg-white text-black">
-            <tr>
+            <tr className="text-sm sm:text-base">
             <th className="px-4 py-2 text-left">حالة الاشتراك</th>
               <th className="px-4 py-2 text-left">تاريخ الانتهاء</th>
               <th className="px-4 py-2 text-left">تاريخ البدء</th>
@@ -75,3 +75,5 @@ const page = () => {
 };
 
 export default page;
+
+

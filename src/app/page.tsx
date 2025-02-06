@@ -27,14 +27,14 @@ import imge16 from "./Image/imge16.jpg";
 
 const  Home = () => {
   return (
-          <>
+          <section>
           <div>
-            <Image className="w-full h-[400px] md:h-[500px] lg:h-[700px] 2xl:h-[990px]  object-cover" src={img1} alt="" />
+            <Image className="w-full h-[400px] md:h-[500px] lg:h-[700px] 2xl:h-[990px]  object-cover" src={img1} alt="img1" />
         <div className='grid justify-center items-center  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4 gap-6 h-auto md:h-[800px] lg:h-[600px] '>
     <div className='flex justify-center items-center'>
         <div className='bg-white w-full h-[350px] md:h-[360px] lg:h-[360px]  md:w-80 lg:w-80 rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
-            <Image src={logo1} alt="" className="w-16 h-16 " />
+            <Image src={logo1} alt="logo1" className="w-16 h-16 " />
       <h1 className="border-b-2 border-solid border-orange-500 p-3">WEGHT LIFTING</h1>
             <p className='p-6'>Dignissimos asperiores vitae velit veniam totarn fuga molestias accusamus alias autem provident. odit ab aliquam dolor eius</p>
           <a href='/contact'>
@@ -51,7 +51,7 @@ const  Home = () => {
     <div className='flex justify-center items-center'>
         <div className='bg-white w-full h-[350px] md:h-[360px] lg:h-[360px]  md:w-80 lg:w-80 rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
-          <Image src={logo2} alt="" className='w-16 h-16' />
+          <Image src={logo2} alt="logo2" className='w-16 h-16' />
       <h1 className="border-b-2 border-solid border-orange-500 p-3">Cardio</h1>
             <p className='p-6' >
             Cardio exercises, like running, are essential for improving heart health, burning calories, and boosting overall energy levels.</p>
@@ -69,7 +69,7 @@ const  Home = () => {
     <div className='flex justify-center items-center'>
         <div className='bg-white w-full h-[350px] md:h-[360px] lg:h-[360px]  md:w-80 lg:w-80 rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
-          <Image src={logo2} alt="" className='w-16 h-16' />
+          <Image src={logo2} alt="logo3" className='w-16 h-16' />
       <h1 className="border-b-2 border-solid border-orange-500 p-3">Injury Rehabilitation</h1>
             <p className='p-6' >
               Injury rehabilitation involves a series of exercises and treatments to restore strength, flexibility, and function after an injury, helping  prevent .
@@ -89,7 +89,7 @@ const  Home = () => {
  <div className='flex justify-center items-center '>
         <div className='bg-white w-full h-[350px] md:h-[360px] lg:h-[360px]  md:w-80 lg:w-80 rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
-          <Image src={logo3} alt="" className='w-16 h-16' />
+          <Image src={logo3} alt="logo3" className='w-16 h-16' />
       <h1 className="border-b-2 border-solid border-orange-500 p-3">RUNING</h1>
             <p className='p-6'>
             Running offers numerous benefits, including improved cardiovascular health, increased stamina, and enhanced mental well-being.
@@ -109,7 +109,7 @@ const  Home = () => {
  
             {/* Section 2 */}
             <div className='p-10'>
-              <h1 className='text-center text-orange-500 italic pt-8 text-2xl'>FITNESS EXPERT</h1>
+              <h1 className='text-center text-orange-500 italic pt-8 text-2xl'>FITNESS <span className='text-white'>EXPERT</span></h1>
               <p className='text-zinc-300 text-center w-auto mt-3'>
               A dedicated fitness expert with a passion for helping individuals achieve their health and wellness <br /> goals through tailored workout plans, nutrition guidance, and motivational coaching. </p>
               <div className='grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 '>
@@ -118,7 +118,7 @@ const  Home = () => {
 
           <a href='/contact'>
 
-          <Image src={fit1} alt="" className="w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight" />
+          <Image src={fit1} alt="fit1" className="w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight" />
           <div className='flex justify-center p-5 gap-5'>
           <span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className='w-6 h-6 text-orange-500'>
@@ -139,7 +139,7 @@ const  Home = () => {
     <div className='flex justify-center'>
         <div className='bg-white w-auto h-auto sm:w-80 lg:w-80 flex justify-center flex-col rounded-2xl p-3'>
         <a href='/contact'>
-        <Image src={fit2} alt="" className='w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight' />
+        <Image src={fit2} alt="fit2" className='w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight' />
           <div className='flex justify-center p-5 gap-5'>
 
           <span>
@@ -162,7 +162,7 @@ const  Home = () => {
         <div className='bg-white w-auto h-auto sm:w-80 lg:w-80 flex justify-center flex-col rounded-2xl p-3'>
          
           <a href='/contact'>
-          <Image src={fit3} alt="" className='w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight' />
+          <Image src={fit3} alt="fit3" className='w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight' />
           <div className='flex justify-center p-5 gap-5'>
 
         <span>
@@ -206,14 +206,14 @@ const  Home = () => {
     { img: imge16, name: 'مياه معدنيه', price: '10 جنية' },
   ].map((item, index) => (
     <div key={index} className="flex justify-center items-center flex-col p-5 ">
-      <Image src={item.img} alt={item.name} className="w-28 h-28 rounded-xl transform transition duration-300 hover:scale-110 cursor-pointer" />
+      <Image src={item.img} alt={item.name} className="w-24 h-24 rounded-xl transform transition duration-300 hover:scale-110 cursor-pointer" />
       <p className="text-black mt-3">{item.name}</p>
       <span className="text-black">{item.price}</span>
     </div>
   ))}
 </div>
                 {/*  */}
-              </>    
+              </section>    
   );
 };
 

@@ -287,7 +287,7 @@ const Schedule = () => {
     {/*  */}
 
     {/*  */}
-    <div className=" py-10 ">
+    <div className=" py-10 mb-8 ">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول تمارين الكونغ فو</h1>
         <div className="overflow-x-auto">
