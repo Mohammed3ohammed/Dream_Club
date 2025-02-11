@@ -19,8 +19,6 @@ const page = () => {
   return (
     <div className="p-8  text-black min-h-screen" dir="rtl">
       <h1 className="text-4xl font-bold mb-8 text-center text-white">لوحة تحكم المشترك</h1>
-
-      {/* معلومات المشترك */}
       <div className="bg-black text-white p-6 rounded-lg shadow-lg mb-8" >
         <h2 className="text-2xl font-bold mb-4">معلومات المشترك</h2>
         <p className="mb-2">
@@ -49,7 +47,6 @@ const page = () => {
         </p>
       </div>
 
-      {/* الجلسات المحجوزة */}
       <div className="bg-black text-white p-6 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-4">الجلسات المحجوزة</h2>
         {subscriberData.sessions.length > 0 ? (

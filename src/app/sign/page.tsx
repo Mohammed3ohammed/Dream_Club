@@ -33,7 +33,7 @@ return (
           </label>
         <input className="w-80 mb-4 h-8 bg-zinc-700 rounded-md focus:outline-orange-500" type="password" required  />
         <button type="submit" className="w-full mt-3  text-lg    border-2 border-solid border-orange-500 p-1 rounded-full text-white font-semibold h-auto transition hover:bg-orange-500"> 
-          Sign in
+          Sign Up
           </button>
         
     </form>

@@ -158,7 +158,6 @@ const Schedule = () => {
 
   return (
     <>
-      {/* جدول مواعيد الجيم */}
       <div className=" py-10">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول مواعيد الجيم</h1>
@@ -184,8 +183,6 @@ const Schedule = () => {
           </div>
         </div>
       </div>
-
-      {/* جدول Push Pull Legs */}
       <div className=" py-10 ">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">Push Pull Legs Schedule</h1>
@@ -217,7 +214,6 @@ const Schedule = () => {
           </div>
         </div>
       </div>
-      {/*  */}
       <div className="py-10 ">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول تمارين اللياقة البدنية</h1>
@@ -251,8 +247,6 @@ const Schedule = () => {
         </div>
       </div>
     </div>
-      {/*  */}
-              
       <div className="py-10 ">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول تأهيل الإصابات</h1>
@@ -284,9 +278,6 @@ const Schedule = () => {
         </div>
       </div>
     </div>
-    {/*  */}
-
-    {/*  */}
     <div className=" py-10 mb-8 ">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول تمارين الكونغ فو</h1>

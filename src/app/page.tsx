@@ -23,9 +23,29 @@ import imge13 from "./Image/imag13.jpg";
 import imge14 from "./Image/imag14.jpg";
 import imge15 from "./Image/imag15.jpg";
 import imge16 from "./Image/imge16.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faDumbbell } from "@fortawesome/free-solid-svg-icons";
 // 
 
 const  Home = () => {
+  const products = [ 
+    { img: imge1, name: 'ماس مكمل غذائي', price: '3000  جنية' },
+    { img: imge2, name: 'واي بروتين مكمل غذائي', price: '4000 جنية' },
+    { img: imge3, name: 'كرياتين أون', price: '1900 جنية' },
+    { img: imge4, name: 'ريد ريكس كرياتين', price: '1000 جنية' },
+    { img: imge5, name: 'كرياتين', price: '1200 جنية' },
+    { img: imge6, name: 'شيكر', price: '250 جنيه' },
+    { img: imge7, name: 'شيكر', price: '400 جنية' },
+    { img: imge8, name: 'حزام ضهر', price: '400 جنية' },
+    { img: imge9, name: 'جونت جيم رجالي', price: '150  جنية' },
+    { img: imge10, name: 'جونت جيم حريمي', price: '150 جنية' },
+    { img: imge11, name: 'قلفز كونغوفو', price: '200 جنية' },
+    { img: imge12, name: 'قلفز كونغوفو', price: '400 جنية' },
+    { img: imge13, name: 'حزام تاهيل اصابات', price: '400 جنية' },
+    { img: imge14, name: 'واقي قدم', price: '300 جنية' },
+    { img: imge15, name: 'واقي راس', price: '300 جنية' },
+    { img: imge16, name: 'مياه معدنيه', price: '10 جنية' },
+  ];
   return (
           <section>
           <div>
@@ -120,39 +140,19 @@ const  Home = () => {
 
           <Image src={fit1} alt="fit1" className="w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight" />
           <div className='flex justify-center p-5 gap-5'>
-          <span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className='w-6 h-6 text-orange-500'>
-        <path fill="currentColor" d="M96 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 160 0 64 0 160c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-64-32 0c-17.7 0-32-14.3-32-32l0-64c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-64c0-17.7 14.3-32 32-32l32 0 0-64zm448 0l0 64 32 0c17.7 0 32 14.3 32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 64c0 17.7-14.3 32-32 32l-32 0 0 64c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-160 0-64 0-160c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32zM416 224l0 64-192 0 0-64 192 0z"/>
-        </svg>
-          </span>
-          <span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='w-6 h-6 text-orange-500'>
-            <path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/>
-        </svg>
-          </span>
-
+          <FontAwesomeIcon icon={faUser} fill="currentColor" className='w-6 h-6 text-orange-500' />
+        <FontAwesomeIcon icon={faDumbbell} fill="currentColor"  className='w-6 h-6 text-orange-500'/>
           </div> 
           </a>
-        {/* */}
         </div>
-                </div>  
+        </div>  
     <div className='flex justify-center'>
         <div className='bg-white w-auto h-auto sm:w-80 lg:w-80 flex justify-center flex-col rounded-2xl p-3'>
         <a href='/contact'>
         <Image src={fit2} alt="fit2" className='w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight' />
           <div className='flex justify-center p-5 gap-5'>
-
-          <span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className='w-6 h-6 text-orange-500'>
-        <path fill="currentColor" d="M96 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 160 0 64 0 160c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-64-32 0c-17.7 0-32-14.3-32-32l0-64c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-64c0-17.7 14.3-32 32-32l32 0 0-64zm448 0l0 64 32 0c17.7 0 32 14.3 32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 64c0 17.7-14.3 32-32 32l-32 0 0 64c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-160 0-64 0-160c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32zM416 224l0 64-192 0 0-64 192 0z"/>
-        </svg>
-          </span>
-          <span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='w-6 h-6 text-orange-500'>
-        <path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/>
-        </svg>
-          </span>
-
+          <FontAwesomeIcon icon={faUser} fill="currentColor" className='w-6 h-6 text-orange-500' />
+          <FontAwesomeIcon icon={faDumbbell} fill="currentColor"  className='w-6 h-6 text-orange-500'/>
         </div>
         </a>
         </div>
@@ -164,47 +164,18 @@ const  Home = () => {
           <a href='/contact'>
           <Image src={fit3} alt="fit3" className='w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight' />
           <div className='flex justify-center p-5 gap-5'>
-
-        <span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className='w-6 h-6 text-orange-500'>
-        <path fill="currentColor" d="M96 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 160 0 64 0 160c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-64-32 0c-17.7 0-32-14.3-32-32l0-64c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-64c0-17.7 14.3-32 32-32l32 0 0-64zm448 0l0 64 32 0c17.7 0 32 14.3 32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 64c0 17.7-14.3 32-32 32l-32 0 0 64c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-160 0-64 0-160c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32zM416 224l0 64-192 0 0-64 192 0z"/>
-        </svg>
-        </span>
-        <span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='w-6 h-6 text-orange-500'>
-        <path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/>
-        </svg>
-        </span>
-
-
+          <FontAwesomeIcon icon={faUser} fill="currentColor" className='w-6 h-6 text-orange-500' />
+        <FontAwesomeIcon icon={faDumbbell} fill="currentColor"  className='w-6 h-6 text-orange-500'/>
         </div>
           </a>
-          
           </div>
         </div>
                 </div>  
                 </div> 
-                {/*  */}
 
 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-5 mt-10  bg-white">
-  {[ 
-    { img: imge1, name: 'ماس مكمل غذائي', price: '3000  جنية' },
-    { img: imge2, name: 'واي بروتين مكمل غذائي', price: '4000 جنية' },
-    { img: imge3, name: 'كرياتين أون', price: '1900 جنية' },
-    { img: imge4, name: 'ريد ريكس كرياتين', price: '1000 جنية' },
-    { img: imge5, name: 'كرياتين', price: '1200 جنية' },
-    { img: imge6, name: 'شيكر', price: '250 جنيه' },
-    { img: imge7, name: 'شيكر', price: '400 جنية' },
-    { img: imge8, name: 'حزام ضهر', price: '400 جنية' },
-    { img: imge9, name: 'جونت جيم رجالي', price: '150  جنية' },
-    { img: imge10, name: 'جونت جيم حريمي', price: '150 جنية' },
-    { img: imge11, name: 'قلفز كونغوفو', price: '200 جنية' },
-    { img: imge12, name: 'قلفز كونغوفو', price: '400 جنية' },
-    { img: imge13, name: 'حزام تاهيل اصابات', price: '400 جنية' },
-    { img: imge14, name: 'واقي قدم', price: '300 جنية' },
-    { img: imge15, name: 'واقي راس', price: '300 جنية' },
-    { img: imge16, name: 'مياه معدنيه', price: '10 جنية' },
-  ].map((item, index) => (
+  {
+  products.map((item, index) => (
     <div key={index} className="flex justify-center items-center flex-col p-5 ">
       <Image src={item.img} alt={item.name} className="w-24 h-24 rounded-xl transform transition duration-300 hover:scale-110 cursor-pointer" />
       <p className="text-black mt-3">{item.name}</p>

@@ -14,12 +14,6 @@ const page = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-20 '>
             <div className='mb-20 flex justify-center items-center'>
                 <form action="/submit" method="post" className='flex flex-col gap-5 lg:w-8/12 p-4 md:w-8/12 w-full opacity-80  justify-center '>
-                <label>السن</label>
-                <input type='number' required placeholder='السن' className='text-black h-10 rounded-2xl outline-none transition focus:outline-orange-500 p-2' /> 
-                <label>الوزن</label>
-                <input type='number' required placeholder='الوزن' className='text-black h-10 rounded-2xl outline-none transition focus:outline-orange-500 p-2' />
-                <label>الطول</label>
-                <input type='number' required placeholder='الطول' className='text-black h-10 rounded-2xl outline-none transition focus:outline-orange-500 p-2' />
                 <label className='mt-10 text-xl'>انواع الاشتركات</label>
                 <select id="gym-plan" name="gym-plan" className='bg-black'>
     <option value="">-- جيم رجال --</option>
@@ -57,7 +51,7 @@ const page = () => {
                 <div className='flex justify-center items-center relative '>
                     <Image src={logo}
                      alt="" 
-                    className='absolute -top-10 cursor-pointer rounded-3xl  p-4 transform transition duration-300 hover:scale-110 animate-bounceLight'
+                    className='absolute h-96 -top-10 cursor-pointer rounded-3xl  p-4 transform transition duration-300 hover:scale-110 animate-bounceLight'
                    
                      />
                 </div>

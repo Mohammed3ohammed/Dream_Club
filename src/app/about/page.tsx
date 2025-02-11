@@ -5,7 +5,6 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// استيراد الصور
 import img2 from "../../../public/Image/img2.jpg";
 import img3 from "../../../public/Image/img3.jpg";
 import img6 from "../../../public/Image/img6.jpg";
@@ -22,7 +21,6 @@ const Page = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // التأكد من أنه يعمل فقط على العميل
     setIsClient(true);
     
     const imgs = document.querySelectorAll("img");
@@ -47,14 +45,13 @@ const Page = () => {
   }, []);
 
   if (!isClient) {
-    return null; // تفادي أي محاولة لتطبيق الكود على الخادم
+    return null;
   }
 
   const images = [img2, img3, img6, img8, img9, img10, img11, img14, img15];
 
   return (
     <>
-      {/* النصوص */}
       <div className="flex flex-col justify-center items-center mt-10 mb-10 p-2">
         <h1 className="text-3xl text-orange-500 italic">
           Dream <span className="text-white">Club</span> لية تشترك في
@@ -71,8 +68,6 @@ const Page = () => {
           <li>مع Dream Club، رحلتك للصحة والسعادة تبدأ هنا. يلا اشترك دلوقتي! 🚀</li>
         </ul>
       </div>
-
-      {/* الصور */}
       <div
         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-4 justify-items-center place-items-center gap-9 mt-14 mb-10"
       >

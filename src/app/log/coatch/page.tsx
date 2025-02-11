@@ -1,10 +1,6 @@
 import React from "react";
-
-
-
 const page = () => {
-  // بيانات تجريبية
-  const coachName = "كابتن علي عرقوب"; // اسم الكابتن الحالي
+  const coachName = "كابتن علي عرقوب"; 
 
   const subscribers = [
     {
