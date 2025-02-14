@@ -24,27 +24,28 @@ import imge14 from "./Image/imag14.jpg";
 import imge15 from "./Image/imag15.jpg";
 import imge16 from "./Image/imge16.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faDumbbell } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faDumbbell, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Link from 'next/link';
 // 
 
 const  Home = () => {
   const products = [ 
-    { img: imge1, name: 'ماس مكمل غذائي', price: '3000  جنية' },
-    { img: imge2, name: 'واي بروتين مكمل غذائي', price: '4000 جنية' },
-    { img: imge3, name: 'كرياتين أون', price: '1900 جنية' },
-    { img: imge4, name: 'ريد ريكس كرياتين', price: '1000 جنية' },
-    { img: imge5, name: 'كرياتين', price: '1200 جنية' },
-    { img: imge6, name: 'شيكر', price: '250 جنيه' },
-    { img: imge7, name: 'شيكر', price: '400 جنية' },
-    { img: imge8, name: 'حزام ضهر', price: '400 جنية' },
-    { img: imge9, name: 'جونت جيم رجالي', price: '150  جنية' },
-    { img: imge10, name: 'جونت جيم حريمي', price: '150 جنية' },
-    { img: imge11, name: 'قلفز كونغوفو', price: '200 جنية' },
-    { img: imge12, name: 'قلفز كونغوفو', price: '400 جنية' },
-    { img: imge13, name: 'حزام تاهيل اصابات', price: '400 جنية' },
-    { img: imge14, name: 'واقي قدم', price: '300 جنية' },
-    { img: imge15, name: 'واقي راس', price: '300 جنية' },
-    { img: imge16, name: 'مياه معدنيه', price: '10 جنية' },
+    { img: imge1, name: 'Mass General', price: '3000 EGP' },
+    { img: imge2, name: 'Whey Protein Supplement', price: '4000 EGP' },
+    { img: imge3, name: 'ON Creatine', price: '1900 EGP' },
+    { img: imge4, name: 'Red Rex Creatine', price: '1000 EGP' },
+    { img: imge5, name: 'Creatine', price: '1200 EGP' },
+    { img: imge6, name: 'Shaker', price: '250 EGP' },
+    { img: imge7, name: 'Shaker', price: '400 EGP' },
+    { img: imge8, name: 'Back Belt', price: '400 EGP' },
+    { img: imge9, name: 'Men’s Gym Gloves', price: '150 EGP' },
+    { img: imge10, name: 'Women’s Gym Gloves', price: '150 EGP' },
+    { img: imge11, name: 'Kung Fu Gloves', price: '200 EGP' },
+    { img: imge12, name: 'Kung Fu Gloves', price: '400 EGP' },
+    { img: imge13, name: 'Injury Rehabilitation Belt', price: '400 EGP' },
+    { img: imge14, name: 'Foot Guard', price: '300 EGP' },
+    { img: imge15, name: 'Head Guard', price: '300 EGP' },
+    { img: imge16, name: 'Mineral Water', price: '10 EGP' },
   ];
   return (
           <section>
@@ -57,17 +58,14 @@ const  Home = () => {
             <Image src={logo1} alt="logo1" className="w-16 h-16 " />
       <h1 className="border-b-2 border-solid border-orange-500 p-3">WEGHT LIFTING</h1>
             <p className='p-6'>Dignissimos asperiores vitae velit veniam totarn fuga molestias accusamus alias autem provident. odit ab aliquam dolor eius</p>
-          <a href='/contact'>
+          <Link href='/contact'>
           <button className='flex border-2  border-solid p-2 rounded-full border-orange-500 text-orange-500 w-32 mt-5 transition hover:bg-orange-500 hover:text-white'>
-              More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.5" stroke="currentColor" className="size-6 ml-4 ">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-          </svg>
+          More <FontAwesomeIcon icon={faArrowRight} fill="none" className="size-6 ml-4 w-4 h-4"  />
           </button>
-          </a>
+          </Link>
           </div>
         </div>
         </div>  
-
     <div className='flex justify-center items-center'>
         <div className='bg-white w-full h-[350px] md:h-[360px] lg:h-[360px]  md:w-80 lg:w-80 rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
@@ -75,13 +73,11 @@ const  Home = () => {
       <h1 className="border-b-2 border-solid border-orange-500 p-3">Cardio</h1>
             <p className='p-6' >
             Cardio exercises, like running, are essential for improving heart health, burning calories, and boosting overall energy levels.</p>
-           <a href='/contact'>
+           <Link href='/contact'>
            <button className='flex border-2  border-solid p-2 rounded-full border-orange-500 text-orange-500 w-32 mt-5 transition hover:bg-orange-500 hover:text-white'>
-            More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.5" stroke="currentColor" className="size-6 ml-4">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-          </svg>
+            More <FontAwesomeIcon icon={faArrowRight} fill="none" className="size-6 ml-4 w-4 h-4"  />
           </button>
-          </a>
+          </Link>
           </div>
         </div>
         </div>  
@@ -94,40 +90,32 @@ const  Home = () => {
             <p className='p-6' >
               Injury rehabilitation involves a series of exercises and treatments to restore strength, flexibility, and function after an injury, helping  prevent .
             </p>
-           <a href='/contact'>
+           <Link href='/contact'>
            <button className='flex border-2  border-solid p-2 rounded-full border-orange-500 text-orange-500 w-32 transition hover:bg-orange-500 hover:text-white'>
-            More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.5" stroke="currentColor" className="size-6 ml-4">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-          </svg>
+            More <FontAwesomeIcon icon={faArrowRight} fill="none" className="size-6 ml-4 w-4 h-4"  />
           </button>
-          </a>
+          </Link>
           </div>
         </div>
         </div>  
-
-
- <div className='flex justify-center items-center '>
+        <div className='flex justify-center items-center '>
         <div className='bg-white w-full h-[350px] md:h-[360px] lg:h-[360px]  md:w-80 lg:w-80 rounded-2xl p-3'>
           <div className='text-black flex justify-evenly items-center flex-col'>
           <Image src={logo3} alt="logo3" className='w-16 h-16' />
-      <h1 className="border-b-2 border-solid border-orange-500 p-3">RUNING</h1>
+            <h1 className="border-b-2 border-solid border-orange-500 p-3">RUNING</h1>
             <p className='p-6'>
             Running offers numerous benefits, including improved cardiovascular health, increased stamina, and enhanced mental well-being.
             </p>
-            <a href='/contact'>
+            <Link href='/contact'>
             <button className='flex border-2  border-solid p-2 rounded-full border-orange-500 text-orange-500 w-32 mt-6 transition hover:bg-orange-500 hover:text-white'>
-              More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  width="1.5" stroke="currentColor" className="size-6 ml-4">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-          </svg>
+              More <FontAwesomeIcon icon={faArrowRight} fill="none" className="size-6 ml-4 w-4 h-4"  />
     </button>
-            </a>
+            </Link>
           </div>
         </div>
                 </div>   
                 </div> 
             </div>
- 
-            {/* Section 2 */}
             <div className='p-10'>
               <h1 className='text-center text-orange-500 italic pt-8 text-2xl'>FITNESS <span className='text-white'>EXPERT</span></h1>
               <p className='text-zinc-300 text-center w-auto mt-3'>
@@ -135,55 +123,50 @@ const  Home = () => {
               <div className='grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 '>
     <div className='flex justify-center lg:justify-end'>
         <div className='bg-white w-auto h-auto sm:w-80 lg:w-80 flex justify-center flex-col rounded-2xl p-3'>
-
-          <a href='/contact'>
-
+          <Link href='/contact'>
           <Image src={fit1} alt="fit1" className="w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight" />
           <div className='flex justify-center p-5 gap-5'>
           <FontAwesomeIcon icon={faUser} fill="currentColor" className='w-6 h-6 text-orange-500' />
         <FontAwesomeIcon icon={faDumbbell} fill="currentColor"  className='w-6 h-6 text-orange-500'/>
           </div> 
-          </a>
+          </Link>
         </div>
         </div>  
     <div className='flex justify-center'>
         <div className='bg-white w-auto h-auto sm:w-80 lg:w-80 flex justify-center flex-col rounded-2xl p-3'>
-        <a href='/contact'>
+        <Link href='/contact'>
         <Image src={fit2} alt="fit2" className='w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight' />
           <div className='flex justify-center p-5 gap-5'>
           <FontAwesomeIcon icon={faUser} fill="currentColor" className='w-6 h-6 text-orange-500' />
           <FontAwesomeIcon icon={faDumbbell} fill="currentColor"  className='w-6 h-6 text-orange-500'/>
         </div>
-        </a>
+        </Link>
         </div>
           </div> 
 
     <div className='flex justify-center lg:justify-start '>
         <div className='bg-white w-auto h-auto sm:w-80 lg:w-80 flex justify-center flex-col rounded-2xl p-3'>
-         
-          <a href='/contact'>
+          <Link href='/contact'>
           <Image src={fit3} alt="fit3" className='w-96 h-96 rounded-xl transform transition duration-300 hover:scale-105 animate-bounceLight' />
           <div className='flex justify-center p-5 gap-5'>
           <FontAwesomeIcon icon={faUser} fill="currentColor" className='w-6 h-6 text-orange-500' />
         <FontAwesomeIcon icon={faDumbbell} fill="currentColor"  className='w-6 h-6 text-orange-500'/>
         </div>
-          </a>
+          </Link>
           </div>
         </div>
                 </div>  
                 </div> 
-
-<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-5 mt-10  bg-white">
-  {
-  products.map((item, index) => (
-    <div key={index} className="flex justify-center items-center flex-col p-5 ">
-      <Image src={item.img} alt={item.name} className="w-24 h-24 rounded-xl transform transition duration-300 hover:scale-110 cursor-pointer" />
-      <p className="text-black mt-3">{item.name}</p>
-      <span className="text-black">{item.price}</span>
-    </div>
-  ))}
-</div>
-                {/*  */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-5 mt-10  bg-white">
+          {
+          products.map((item, index) => (
+            <div key={index} className="flex justify-center items-center flex-col p-5 ">
+              <Image src={item.img} alt={item.name} className="w-24 h-24 rounded-xl transform transition duration-300 hover:scale-110 cursor-pointer" />
+              <p className="text-black mt-3">{item.name}</p>
+              <span className="text-black">{item.price}</span>
+            </div>
+          ))};
+              </div>
               </section>    
   );
 };

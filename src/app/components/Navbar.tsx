@@ -5,10 +5,18 @@ import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
+  const router = useRouter();
+  const pathname = usePathname();
+  const toggleLanguage = () => {
+    const currentLang = pathname.startsWith("/ar") ? "en" : "ar"; 
+    let newPath = pathname.replace(/^\/(en|ar)/, ""); 
+    newPath = newPath === "" ? "/" : newPath;
+    router.replace(`/${currentLang}${newPath}`);
+  };
   return (
     <nav className="z-50">
           <div className="bg-white opacity-95 h-20 flex justify-around items-center px-4 md:px-10 lg:px-20  z-50">
@@ -18,7 +26,7 @@ const Navbar = () => {
           onClick={() => setMenuOpen(!isMenuOpen)}
           aria-label="فتح القائمة"
           aria-expanded={isMenuOpen}
-           aria-controls="mobile-menu"
+          aria-controls="mobile-menu"
           role="button"
           tabIndex={0}
           onKeyDown={(e) => {
@@ -42,9 +50,9 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(false)}
               />
               </Link>
-              <button>
-              <FontAwesomeIcon
-               icon={faEarthAmericas} fill="currentColor" className="w-6 h-6 text-orange-500 transform transition duration-300 hover:scale-150 animate-bounceLight" onClick={() => setMenuOpen(false)} />
+              <button onClick={toggleLanguage}>
+              <FontAwesomeIcon 
+              icon={faEarthAmericas} fill="currentColor" className="w-6 h-6 text-orange-500 transform transition duration-300 hover:scale-150 animate-bounceLight" onClick={() => setMenuOpen(false)} />
               </button>
             </ul>
           </div>

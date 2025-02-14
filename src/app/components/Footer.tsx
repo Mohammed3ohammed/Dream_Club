@@ -28,36 +28,35 @@ const Footer = () => {
                 <Link href="#" className="mb-5 ">
                                 <FontAwesomeIcon
                  icon={faLocationDot} fill="currentColor" className="icons w-8 h-8 mb-2  transform transition duration-300 hover:scale-125" />
-               <p>الفرع الأول  ش - الحيار ابو المطامير البحيرة</p>
+                  <p>First Branch - Al-Hayar St., Abu El Matamir, Beheira</p>
                 </Link>
                 <Link href="#" className="mb-5 ">
                 <FontAwesomeIcon
                  icon={faLocationDot} fill="currentColor" className="icons w-8 h-8 mb-2  transform transition duration-300 hover:scale-125 " />
-                      <p>الفرع الثاني ش - خميس  ابو المطامير البحيرة</p>
+                   <p>Second Branch - Khamis St., Abu El Matamir, Beheira</p>
                 </Link>
-
-           </div>
-    </div>
+          </div>
+          </div>
 
           <div className="flex justify-center gap-10 mt-5">
-              <a href="https://www.facebook.com/Dreamclub.Officiall" target="_blank" aria-label="Visit our Facebook page">
+              <Link href="https://www.facebook.com/Dreamclub.Officiall" target="_blank" aria-label="Visit our Facebook page">
               <FontAwesomeIcon
               icon={faFacebook} className="icons w-8 h-8 mb-8 transform transition duration-300 hover:scale-125" />
-              </a>
-            <a href="https://wa.me/201064245335"  target="_blank" rel="noopener noreferrer">
+              </Link>
+            <Link href="https://wa.me/201064245335"  target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon 
             icon={faWhatsapp} fill="currentColor" className="icons w-8 h-8  transform transition duration-300 hover:scale-125" />
-            </a>
-              <a href="https://www.instagram.com/dream_club.official?igsh=aWx5ejB6dHV3dnVw" target="_blank">
+            </Link>
+              <Link href="https://www.instagram.com/dream_club.official?igsh=aWx5ejB6dHV3dnVw" target="_blank">
               <FontAwesomeIcon
               icon={faInstagram}  fill="currentColor"  className="icons w-8 h-8  transform transition duration-300 hover:scale-125"/>
-              </a>
-              <a href="http://tiktok.com">
+              </Link>
+              <Link href="http://tiktok.com">
               <FontAwesomeIcon
                icon={faTiktok} fill="currentColor" className="icons w-8 h-8  transform transition duration-300 hover:scale-125" />
-              </a>
+              </Link>
           </div>
-          <p className="text-center text-xl p-5">Team P9  @جميع الحقوق محفوظة لدي  </p>
+          <p className="text-center text-xl p-5">All rights reserved by @ Team P9</p>
     </footer>
   );
 };

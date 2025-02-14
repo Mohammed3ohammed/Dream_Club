@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
+import Link from 'next/link';
 import imge1 from"../../../public/Captins/Image1.jpg";
 import imge2 from"../../../public/Captins/Image2.jpg";
 import imge3 from"../../../public/Captins/Image3.jpg";
@@ -7,74 +8,77 @@ import imge4 from"../../../public/Captins/Image4.jpg";
 import imge5 from"../../../public/Captins/Image5.jpg";
 import imge6 from"../../../public/Captins/Image6.png";
 
+
 const page = () => {
 
   const Images = [
     {
-    name:"كابتن عبدالرحمن عرقوب", 
-    study: 'معيد لدي كلية تربيه رياضيه جامعة الاسكندرية',
-    discription: `
-     متخصص في تأهيل الإصابات الرياضية وتدريب الكونغ فو. بخبرة تمتد لسنوات في هذا المجال، أقدم برامج تدريب وتأهيل مخصصة لكل فرد، تهدف إلى استعادة القوة والمرونة بعد الإصابات، مع تحسين الأداء البدني. أعمل أيضًا على تدريب المهارات القتالية وتعزيز الأداء الرياضي في الكونغ فو بمستوى احترافي. أضمن تقديم خطة تدريب متكاملة تعتمد على أحدث الأساليب لضمان تطور ملحوظ ومستدام `,
-    img: imge1, 
-  },
-
+      name: "Captain Abdelrahman Arqoub",
+      study: "Assistant Lecturer at the Faculty of Physical Education, Alexandria University",
+      description: `
+        Specialist in sports injury rehabilitation and Kung Fu training. With years of experience in this field, I provide personalized training and rehabilitation programs tailored to each individual, aiming to restore strength and flexibility after injuries while enhancing physical performance. I also focus on training combat skills and improving athletic performance in Kung Fu at a professional level. I ensure a comprehensive training plan based on the latest techniques to guarantee noticeable and sustainable progress.`,
+      img: imge1,
+    },
     {
-     
-      name: "كابتن عاصم القصبي",
-      study: 'كلية تربيه رياضية جامعة القاهرة',
+      name: "Captain Assem El-Kasaby",
+      study: "Faculty of Physical Education, Cairo University",
       img: imge2,
-      discription:`
-      متخصص في تأهيل الإصابات الرياضية وتدريب الكونغ فو، مع خبرة واسعة في المجال. أقدم برامج تأهيل مخصصة تساعد على استعادة اللياقة والمرونة بعد الإصابات، مع تحسين الأداء البدني بشكل آمن وفعال.
-كما أركز على تطوير المهارات القتالية في الكونغ فو بمستوى احترافي، من خلال خطط تدريب حديثة تهدف إلى تحقيق أفضل النتائج وضمان تقدم مستمر.
-      `,
-    },
+      description: `
+        Specialist in sports injury rehabilitation and Kung Fu training, with extensive experience in the field. I provide customized rehabilitation programs that help restore fitness and flexibility after injuries while improving physical performance in a safe and effective manner.
+        I also focus on developing combat skills in Kung Fu at a professional level through modern training plans designed to achieve the best results and ensure continuous progress.
+      `,},
     {
-      name:"كابتن على القصبي",
-      study:'كلية تربية رياضية جامعة القاهرة',
+      name: "Captain Ali El-Kasaby",
+      study: "Faculty of Physical Education, Cairo University",
       img: imge3,
-      discription:`
-      متخصص في تصميم برامج تدريب شخصية تهدف إلى تحقيق أهدافك الرياضية والصحية. بخبرة تمتد لسنوات في مجال اللياقة البدنية، أعمل على تقديم خطط تدريبية مخصصة لكل فرد بناءً على احتياجاته، سواء كنت تسعى لفقدان الوزن، بناء العضلات، أو تحسين مستوى لياقتك العامة. أؤمن بأن الرياضة ليست فقط وسيلة لتحسين المظهر الجسدي، بل هي أسلوب حياة يساعدك على الشعور بالنشاط والثقة. من خلال دمج أحدث تقنيات التدريب مع نظام غذائي صحي ومتوازن، أضمن لك تحقيق نتائج مستدامة
+      description: `
+        Specialist in designing personalized training programs aimed at achieving your fitness and health goals. With years of experience in the fitness industry, I create customized workout plans tailored to each individual’s needs, whether you're looking to lose weight, build muscle, or improve overall fitness.
+        I believe that fitness is not just about physical appearance but a lifestyle that enhances energy and confidence. By combining the latest training techniques with a healthy and balanced diet, I ensure sustainable results.
       `,
     },
     {
-      name:"كابتن محمد القصبي",
-      study:'كلية تربية رياضية جامعة الاسكندرية',
+      name: "Captain Mohamed El-Kasaby",
+      study: "Faculty of Physical Education, Alexandria University",
       img: imge4,
-      discription:`
-      متخصص في إعداد خطط تدريبية مخصصة تلبي احتياجاتك الرياضية والصحية. مع خبرة تمتد لسنوات في مجال اللياقة البدنية، أضع لك برنامجًا تدريبيًا متكاملًا، سواء كان هدفك فقدان الوزن، زيادة الكتلة العضلية، أو تحسين أدائك البدني بشكل عام. أحرص على أن تكون الرياضة جزءًا من نمط حياتك، مما يمنحك طاقة أكبر وثقة أعلى، من خلال أساليب تدريب حديثة وبرنامج غذائي متوازن لتحقيق نتائج فعالة ومستدامة.
+      description: `
+        Specialist in creating customized training plans tailored to your fitness and health needs. With years of experience in the fitness industry, I design comprehensive workout programs, whether your goal is weight loss, muscle gain, or overall physical improvement.
+        I strive to make fitness a part of your lifestyle, providing you with more energy and greater confidence through modern training methods and a balanced nutrition plan to achieve effective and sustainable results.
       `,
     },
     {
-      name:"كابتن فارس المناخلى",
-      study:'كلية التربية الرياضية جامعة بني سويف',
+      name: "Captain Fares El-Monakhly",
+      study: "Faculty of Physical Education, Beni Suef University",
       img: imge5,
-      discription:`
-      أساعدك على تحقيق أهدافك الرياضية من خلال برامج تدريب شخصية مصممة خصيصًا لك. سواء كنت ترغب في تحسين أدائك البدني، خسارة الوزن، أو اكتساب قوة وتحمل أكبر، سأضع لك خطة تدريبية تناسب قدراتك وتدعم تقدمك بطريقة متوازنة. أؤمن بأن اللياقة ليست مجرد تمارين، بل أسلوب حياة يعزز صحتك وثقتك بنفسك، لذا أحرص على تقديم تدريب متكامل يجمع بين أحدث الأساليب الرياضية والتوجيه الغذائي السليم لضمان نتائج تدوم.
-      `,
-      
-    },
-    {
-      name:"كابتن بسملة رضا",
-      study:'كلية تربية رياضيه جامعة المنصورة',
-      img: imge6,
-      discription:`
-      مدربة محترفة في الكونغ فو، أساعدكِ على تطوير مهاراتكِ القتالية وتعزيز قوتكِ ولياقتكِ البدنية من خلال أساليب تدريب حديثة ومكثفة. سواء كنتِ مبتدئة أو تبحثين عن الاحتراف، سأضع لكِ برنامجًا تدريبيًا متكاملًا يشمل تحسين القوة، السرعة، والتحمل، بالإضافة إلى تعلم تقنيات الدفاع عن النفس. أؤمن بأن الكونغ فو ليس مجرد رياضة، بل أسلوب حياة يمنحكِ الثقة والانضباط والقوة الذهنية والبدنية.
+      description: `
+        I help you achieve your fitness goals through personalized training programs tailored specifically for you. Whether you aim to improve your physical performance, lose weight, or build strength and endurance, I will create a workout plan that matches your abilities and supports your progress in a balanced way.
+        I believe that fitness is not just about exercise but a lifestyle that enhances your health and confidence. That's why I focus on providing a comprehensive training approach that combines the latest fitness techniques with proper nutritional guidance to ensure lasting results.
       `,
     },
     {
-      name:"كابتن الأء العبد",
-      study:'كلية تربيه رياضية جامعة الاسكندرية',
+      name: "Captain Basma Rida",
+      study: "Faculty of Physical Education, Mansoura University",
       img: imge6,
-      discription:`
-      متخصصة في اللياقة البدنية والتدريب الشخصي، أساعدكِ على تحقيق التوازن بين الرياضة والصحة بأسلوب ممتع وفعال. سواء كان هدفكِ خسارة الوزن، نحت الجسم، أو تحسين مستوى لياقتكِ، سأقدم لكِ خطة تدريبية تناسب نمط حياتكِ وتدعم تقدمكِ. أحرص على أن تكون التمارين ممتعة ومحفزة، مع دمج التغذية السليمة لضمان أفضل النتائج بطريقة صحية ومستدامة.
+      description: `
+        A professional Kung Fu trainer, I help you develop your combat skills, enhance your strength, and improve your overall fitness through modern and intensive training methods. Whether you're a beginner or aiming for a professional level, I will create a comprehensive training program that focuses on building strength, speed, endurance, and mastering self-defense techniques.
+        I believe that Kung Fu is not just a sport but a lifestyle that instills confidence, discipline, and both mental and physical strength.
       `,
     },
     {
-      name:"كابتن رنيم كمال",
-      study:'كلية تربية رياضية جامعة حلوان',
+      name: "Captain Alaa El-Abd",
+      study: "Faculty of Physical Education, Alexandria University",
       img: imge6,
-      discription:`
-      متخصصة في تصميم برامج تدريب شخصية تساعدك على تحقيق أهدافك الرياضية بثقة وقوة. سواء كنتِ ترغبين في تحسين لياقتك، شد الجسم، أو اكتساب قوة وتحمل أكبر، سأضع لكِ خطة تدريبية مصممة خصيصًا لكِ بناءً على احتياجاتك. أؤمن بأن الرياضة تمنحكِ الطاقة والثقة، لذلك أحرص على تقديم تمارين متنوعة وأساليب تدريب حديثة لضمان تطور مستمر ونتائج تدوم.
+      description: `
+        A specialist in fitness and personal training, I help you achieve a balance between exercise and health in a fun and effective way. Whether your goal is weight loss, body sculpting, or improving your overall fitness, I will provide a tailored training plan that fits your lifestyle and supports your progress.
+        I focus on making workouts enjoyable and motivating while incorporating proper nutrition to ensure the best results in a healthy and sustainable way.
+      `,
+    },
+    {
+      name: "Captain Raneem Kamal",
+      study: "Faculty of Physical Education, Helwan University",
+      img: imge6,
+      description: `
+        A specialist in designing personalized training programs to help you achieve your fitness goals with confidence and strength. Whether you want to improve your fitness, tone your body, or build strength and endurance, I will create a tailored training plan based on your needs.
+        I believe that exercise provides energy and confidence, so I focus on offering diverse workouts and modern training techniques to ensure continuous progress and lasting results.
       `,
     }
 
@@ -82,15 +86,15 @@ const page = () => {
 
   return (
        <div className='container mx-auto px-4 mt-10'>
-       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mb-32' dir='rtl'>
+       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mb-32'>
       {
         Images.map((item, id) => (
           <div className=' flex flex-col justify-center items-center  p-5 rounded-xl mt-10shadow-lg' key={id}>
           <Image src={item.img} alt="" className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-105 animate-bounceLight cursor-pointer' />
           <h2 className='text-3xl mt-8'>{item.name}</h2>
           <p className='w-96  text-lg text-center mt-2'>{item.study}</p>
-          <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>{item.discription}</p>
-  <button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition'><a href="/service/sub">اشترك الان</a></button>
+          <p className='w-80 md:w-96 lg:w-96 text-base mt-8'>{item.description}</p>
+  <button className='border-solid border-2 border-orange-500 rounded-full w-36 p-2 mt-5 hover:bg-orange-500 transition'><Link href="/service/sub">Subscribe Now</Link></button>
           </div>
         ))
       }

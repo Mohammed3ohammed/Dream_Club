@@ -1,31 +1,31 @@
 import React from "react";
 const page = () => {
-  const coachName = "كابتن علي عرقوب"; 
+  const coachName = "Captain Ali Al-Qasabi"; 
 
   const subscribers = [
     {
       id: 1,
-      name: "محمد أحمد",
-      coach: "كابتن علي عرقوب",
+      name: "Mohamed Ahmed",
+      coach: "Captain Ali Arqoub",
       startDate: "2025-01-01",
       endDate: "2025-02-01",
-      status: "نشط",
+      status: "Active",
     },
     {
       id: 2,
-      name: "أحمد حسن",
-      coach: "كابتن عاصم القصبي",
+      name: "Ahmed Hassan",
+      coach: "Captain Assem Al-Qasabi",
       startDate: "2025-01-05",
       endDate: "2025-02-05",
-      status: "منتهي",
+      status: "Expired",
     },
     {
       id: 3,
-      name: "علي يوسف",
-      coach: "كابتن علي عرقوب",
+      name: "Ali Youssef",
+      coach: "Captain Ali Arqoub",
       startDate: "2025-01-10",
       endDate: "2025-02-10",
-      status: "نشط",
+      status: "Active",
     },
   ];
 
@@ -35,21 +35,21 @@ const page = () => {
   );
 
   return (
-    <div className="p-8  min-h-screen" dir="rtl">
+    <div className="p-8  min-h-screen">
       <h1 className="text-4xl font-bold mb-8 text-center">
-        لوحة تحكم {coachName}
+      Dashboard {coachName}
       </h1>
       {filteredSubscribers.length > 0 ? (
         <div className="overflow-x-auto">
           <table className="table-auto w-full  rounded-lg shadow-lg">
             <thead className="bg-white text-black">
-              <tr>
-                <th className="px-4 py-2">رقم المشترك</th>
-                <th className="px-4 py-2">اسم المشترك</th>
-                <th className="px-4 py-2">تاريخ البدء</th>
-                <th className="px-4 py-2">تاريخ الانتهاء</th>
-                <th className="px-4 py-2">حالة الاشتراك</th>
-              </tr>
+            <tr>
+              <th className="px-4 py-2">Member ID</th>
+              <th className="px-4 py-2">Member Name</th>
+              <th className="px-4 py-2">Start Date</th>
+              <th className="px-4 py-2">End Date</th>
+              <th className="px-4 py-2">Subscription Status</th>
+            </tr>
             </thead>
             <tbody>
               {filteredSubscribers.map((subscriber) => (
@@ -61,7 +61,7 @@ const page = () => {
                   <td className="px-4 py-2 text-center">
                     <span
                       className={`px-3 py-1 rounded-full text-sm ${
-                        subscriber.status === "نشط"
+                        subscriber.status === "Active"
                           ? "bg-green-200 text-green-800"
                           : "bg-red-200 text-red-800"
                       }`}
@@ -75,8 +75,8 @@ const page = () => {
           </table>
         </div>
       ) : (
-        <p className="text-center text-lg">لا توجد بيانات للمشتركين.</p>
-      )}
+        <p className="text-center text-lg">No member data available.</p>
+      )};
     </div>
   );
 };

@@ -3,156 +3,156 @@ import React from "react";
 const Schedule = () => {
   const schedule = [
     { 
-      day: "السبت", 
-      men: "6:00 PM    -     1:00 AM", 
-      women: "1:00 PM  -      6:00 PM" 
-    },
-    { 
-      day: "الأحد", 
-      men: "2:00 PM   -    1:00 AM", 
-      women: "8:00 AM  -     2:00 PM" 
-    },
-    { 
-      day: "الإثنين", 
-      men: "6:00 PM -  1:00 AM", 
-      women: "1:00 PM - 6:00 PM" 
-    },
-    { 
-      day: "الثلاثاء", 
-      men: "2:00 PM -  1:00 AM", 
-      women: "8:00 AM - 2:00 PM" 
-    },
-    { 
-      day: "الأربعاء", 
+      day: "Saturday", 
       men: "6:00 PM - 1:00 AM", 
       women: "1:00 PM - 6:00 PM" 
     },
     { 
-      day: "الخميس", 
-      men: "2:00 PM -  2:00 AM", 
+      day: "Sunday", 
+      men: "2:00 PM - 1:00 AM", 
       women: "8:00 AM - 2:00 PM" 
     },
     { 
-      day: "الجمعة", 
-      men: "مغلق", 
-      women: "2:00 PM - 6:00 PM" 
+      day: "Monday", 
+      men: "6:00 PM - 1:00 AM", 
+      women: "1:00 PM - 6:00 PM" 
     },
+    { 
+      day: "Tuesday", 
+      men: "2:00 PM - 1:00 AM", 
+      women: "8:00 AM - 2:00 PM" 
+    },
+    { 
+      day: "Wednesday", 
+      men: "6:00 PM - 1:00 AM", 
+      women: "1:00 PM - 6:00 PM" 
+    },
+    { 
+      day: "Thursday", 
+      men: "2:00 PM - 2:00 AM", 
+      women: "8:00 AM - 2:00 PM" 
+    },
+    { 
+      day: "Friday", 
+      men: "Closed", 
+      women: "2:00 PM - 6:00 PM" 
+    }
   ];
 
   const schedul = [
     {
-      type: "Push (الدفع)",
+      type: "Push",
       exercises: [
-        "Bench Press (الصدر)",
-        "Overhead Press (الأكتاف)",
-        "Tricep Dips (الترايسبس)",
+        "Bench Press (Chest)",
+        "Overhead Press (Shoulders)",
+        "Tricep Dips (Triceps)",
       ],
-      days: "السبت، الثلاثاء، الخميس",
+      days: "Saturday, Tuesday, Thursday",
     },
     {
-      type: "Pull (السحب)",
+      type: "Pull",
       exercises: [
-        "Pull-ups (العقلة)",
-        "Barbell Row (التجديف بالبار)",
-        "Bicep Curls (البايسبس)",
+        "Pull-ups (Chin-up)",
+        "Barbell Row (Barbell Rowing)",
+        "Bicep Curls (Biceps)",
       ],
-      days: "الأحد، الأربعاء،",
+      days: "Sunday, Wednesday",
     },
     {
-      type: "Legs (الأرجل)",
+      type: "Legs",
       exercises: [
-        "Squats (القرفصاء)",
-        "Leg Press (ضغط الأرجل)",
-        "Calf Raises (السمانة)",
+        "Squats (Squat)",
+        "Leg Press (Leg Press)",
+        "Calf Raises (Calves)",
       ],
-      days: "الاثنين، الخميس",
+      days: "Monday, Thursday",
     },
   ];
 
   const rehabSchedule = [
     {
-      type: "تأهيل إصابة الكتف",
+      type: "Shoulder Injury Rehabilitation",
       exercises: [
-        "Shoulder Rotations (تدوير الكتف)",
-        "Band Pull Aparts (تمارين باستخدام الشريط)",
-        "Overhead Stretch (تمديد الكتف فوق الرأس)",
+        "Shoulder Rotations",
+        "Band Pull Aparts",
+        "Overhead Stretch",
       ],
-      days: "الأحد، الثلاثاء، الخميس",
+      days: "Sunday, Tuesday, Thursday",
     },
     {
-      type: "تأهيل إصابة الركبة",
+      type: "Knee Injury Rehabilitation",
       exercises: [
-        "Step-ups (صعود السلم)",
-        "Hamstring Curls (تمارين أوتار الركبة)",
-        "Leg Extensions (تمديد الأرجل)",
+        "Step-ups",
+        "Hamstring Curls",
+        "Leg Extensions",
       ],
-      days: "الإثنين، الأربعاء",
+      days: "Monday, Wednesday",
     },
     {
-      type: "تأهيل إصابة الظهر",
+      type: "Back Injury Rehabilitation",
       exercises: [
-        "Cat-Cow Stretch (تمدد القط-البقرة)",
-        "Superman Exercise (تمرين السوبرمان)",
-        "Bridges (الجسور)",
+        "Cat-Cow Stretch",
+        "Superman Exercise",
+        "Bridges",
       ],
-      days: "السبت، الثلاثاء، الخميس",
+      days: "Saturday, Tuesday, Thursday",
     },
   ];
 
   const fitnessPlan = [
     {
-      type: "تمارين الكارديو",
-      exercises: ["المشي السريع", "ركوب الدراجة", "الجري الخفيف"],
-      goals: "تحسين صحة القلب وزيادة اللياقة العامة",
-      days: "الأحد، الثلاثاء، الخميس",
+      type: "Cardio Exercises",
+      exercises: ["Fast Walking", "Cycling", "Light Jogging"],
+      goals: "Improve heart health and increase overall fitness",
+      days: "Sunday, Tuesday, Thursday",
     },
     {
-      type: "تمارين القوة",
-      exercises: ["تمارين الأوزان الحرة", "تمرين السكوات", "تمارين البطن"],
-      goals: "بناء العضلات وزيادة القوة",
-      days: "الإثنين، الأربعاء",
+      type: "Strength Training",
+      exercises: ["Free Weights", "Squats", "Ab Workouts"],
+      goals: "Build muscle and increase strength",
+      days: "Monday, Wednesday",
     },
     {
-      type: "تمارين المرونة",
-      exercises: ["تمارين التمدد", "اليوغا", "تمارين التوازن"],
-      goals: "تحسين المرونة وتخفيف التوتر",
-      days: "السبت",
+      type: "Flexibility Exercises",
+      exercises: ["Stretching", "Yoga", "Balance Exercises"],
+      goals: "Improve flexibility and reduce stress",
+      days: "Saturday",
     },
   ];
 
 
 
   const kungFuSchedule = [
-    {
-      type: "تمارين اللياقة",
-      exercises: [
-        "قفز الحبل (Jump Rope)",
-        "تمارين التمدد الديناميكية (Dynamic Stretching)",
-        "تمارين الجري السريع (Sprint Intervals)",
-      ],
-      goals: "تحسين اللياقة البدنية والمرونة",
-      days: "السبت، الإثنين، الأربعاء",
-    },
-    {
-      type: "تقنيات القتال",
-      exercises: [
-        "تمرين اللكمات (Punching Drills)",
-        "تمارين الركلات العالية (High Kicks)",
-        "تمارين الدفاع (Blocking Techniques)",
-      ],
-      goals: "تطوير مهارات القتال وتقنيات الدفاع",
-      days: "الأحد، الثلاثاء",
-    },
-    {
-      type: "تأمل وتوازن",
-      exercises: [
-        "تمرين التأمل (Meditation)",
-        "تمارين التنفس العميق (Deep Breathing)",
-        "تمارين التوازن (Balance Training)",
-      ],
-      goals: "زيادة التركيز وتحسين التوازن",
-      days: "الخميس",
-    },
+{
+  type: "Fitness Training",
+  exercises: [
+    "Jump Rope",
+    "Dynamic Stretching",
+    "Sprint Intervals",
+  ],
+  goals: "Improve physical fitness and flexibility",
+  days: "Saturday, Monday, Wednesday",
+},
+{
+  type: "Combat Techniques",
+  exercises: [
+    "Punching Drills",
+    "High Kicks",
+    "Blocking Techniques",
+  ],
+  goals: "Develop fighting skills and defensive techniques",
+  days: "Sunday, Tuesday",
+},
+{
+  type: "Meditation & Balance",
+  exercises: [
+    "Meditation",
+    "Deep Breathing",
+    "Balance Training",
+  ],
+  goals: "Increase focus and improve balance",
+  days: "Thursday",
+},
   ];
 
 
@@ -160,22 +160,22 @@ const Schedule = () => {
     <>
       <div className=" py-10">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول مواعيد الجيم</h1>
+          <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">Gym Schedule</h1>
           <div className="overflow-x-auto">
             <table className="w-full table-auto shadow-md rounded-lg">
               <thead className="bg-gray-800 text-white">
-                <tr>
-                  <th className="px-4 py-2 text-left">اليوم</th>
-                  <th className="px-4 py-2 text-left">مواعيد الرجال</th>
-                  <th className="px-4 py-2 text-left">مواعيد السيدات</th>
-                </tr>
+              <tr>
+                <th className="px-4 py-2 text-left">Women s Schedule</th>
+                <th className="px-4 py-2 text-left">Men s Schedule</th>
+                <th className="px-4 py-2 text-left">Day</th>
+              </tr>
               </thead>
               <tbody>
                 {schedule.map((entry, index) => (
                   <tr key={index} className="border-b ">
-                    <td className="px-4 py-2">{entry.day}</td>
-                    <td className="px-4 py-2">{entry.men}</td>
-                    <td className="px-4 py-2">{entry.women}</td>
+                                        <td className="px-4 py-2">{entry.women}</td>
+                                        <td className="px-4 py-2">{entry.men}</td>
+                                        <td className="px-4 py-2">{entry.day}</td>
                   </tr>
                 ))}
               </tbody>
@@ -189,10 +189,10 @@ const Schedule = () => {
           <div className="overflow-x-auto">
             <table className="w-full table-auto shadow-md  rounded-lg">
               <thead className="bg-gray-800 text-white">
-                <tr>
-                  <th className="px-4 py-2 text-left">نوع التمرين</th>
-                  <th className="px-4 py-2 text-left">التمارين</th>
-                  <th className="px-4 py-2 text-left">الأيام</th>
+              <tr>
+                  <th className="px-4 py-2 text-left">Exercise Type</th>
+                  <th className="px-4 py-2 text-left">Exercises</th>
+                  <th className="px-4 py-2 text-left">Days</th>
                 </tr>
               </thead>
               <tbody>
@@ -216,16 +216,16 @@ const Schedule = () => {
       </div>
       <div className="py-10 ">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول تمارين اللياقة البدنية</h1>
+      <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">Fitness Workout Schedule </h1>
         <div className="overflow-x-auto">
           <table className="w-full table-auto  shadow-md rounded-lg">
             <thead className="bg-gray-800 text-white">
-              <tr>
-                <th className="px-4 py-2 text-left">نوع التمرين</th>
-                <th className="px-4 py-2 text-left">التمارين</th>
-                <th className="px-4 py-2 text-left">الأهداف</th>
-                <th className="px-4 py-2 text-left">الأيام</th>
-              </tr>
+            <tr>
+              <th className="px-4 py-2 text-left">Workout Type</th>
+              <th className="px-4 py-2 text-left">Exercises</th>
+              <th className="px-4 py-2 text-left">Goals</th>
+              <th className="px-4 py-2 text-left">Days</th>
+            </tr>
             </thead>
             <tbody>
               {fitnessPlan.map((entry, index) => (
@@ -249,14 +249,14 @@ const Schedule = () => {
     </div>
       <div className="py-10 ">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول تأهيل الإصابات</h1>
+        <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">Injury Rehabilitation Schedule</h1>
         <div className="overflow-x-auto">
           <table className="w-full table-auto  rounded-lg">
             <thead className="bg-gray-800 text-white">
               <tr>
-                <th className="px-4 py-2 text-left">نوع التأهيل</th>
-                <th className="px-4 py-2 text-left">التمارين</th>
-                <th className="px-4 py-2 text-left">الأيام</th>
+              <th className="px-4 py-2 text-left">Rehabilitation Type</th>
+              <th className="px-4 py-2 text-left">Exercises</th>
+              <th className="px-4 py-2 text-left">Days</th>
               </tr>
             </thead>
             <tbody>
@@ -280,15 +280,15 @@ const Schedule = () => {
     </div>
     <div className=" py-10 mb-8 ">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">جدول تمارين الكونغ فو</h1>
+        <h1 className="text-4xl font-bold text-center mb-6 text-gray-600">Kung Fu Training Schedule</h1>
         <div className="overflow-x-auto">
           <table className="w-full table-auto rounded-lg">
             <thead className="bg-gray-800 text-white ">
               <tr>
-                <th className="px-4 py-2 text-left">نوع التمرين</th>
-                <th className="px-4 py-2 text-left">التمارين</th>
-                <th className="px-4 py-2 text-left">الأهداف</th>
-                <th className="px-4 py-2 text-left">الأيام</th>
+              <th className="px-4 py-2 text-left">Training Type</th>
+                <th className="px-4 py-2 text-left">Exercises</th>
+                <th className="px-4 py-2 text-left">Goals</th>
+                <th className="px-4 py-2 text-left">Days</th>
               </tr>
             </thead>
             <tbody>
@@ -316,4 +316,3 @@ const Schedule = () => {
 };
 
 export default Schedule;
-
