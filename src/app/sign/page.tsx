@@ -12,42 +12,52 @@ return (
           </label>
         <input type="text" 
         required 
-        className="w-80 h-8  bg-zinc-700 rounded-md focus:outline-orange-500"  
+        className="w-80 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500"  
          />
         <label className="text-base mb-2 mt-8">
           Email address
           </label>
         <input type="email" 
         required 
-        className="w-80 h-8  bg-zinc-700 rounded-md  focus:outline-orange-500"  
+        className="w-80 h-8 p-2 bg-zinc-700 rounded-md  focus:outline-orange-500"  
          />
-        <label className="text-base mb-2 mt-8">
-         Phone
-          </label>
-        <input type="number" 
-        required 
-        className="w-80 h-8  bg-zinc-700 rounded-md  focus:outline-orange-500"  
-         />
+<label className="text-base mb-2 mt-8">
+  Phone
+</label>
+<input 
+  type="text" 
+  required 
+  className="w-80 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500" 
+  pattern="^[0-9]{11}$" 
+  title="Phone number must be 11 digits" 
+/>
+
         <label className="text-base mb-2 mt-4">
         Password
           </label>
-        <input className="w-80 mb-4 h-8 bg-zinc-700 rounded-md focus:outline-orange-500" type="password" required  />
+        <input className="w-80 mb-4 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500" type="password" required pattern="^\d{8,12}$"
+        />
         <label className="text-base mb-2 mt-4">
         Weight
           </label>
-        <input className="w-80 mb-4 h-8 bg-zinc-700 rounded-md focus:outline-orange-500" type="number" required  />
+        <input className="w-80 mb-4 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500" type="text" pattern="^[0-9]{2,3}$"  required  />
         <label className="text-base mb-2 mt-4">
           Height
           </label>
-        <input className="w-80 mb-4 h-8 bg-zinc-700 rounded-md focus:outline-orange-500" type="number" required  />
+        <input className="w-80 mb-4 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500" type="text" pattern="^[0-9]{2,3}$"  required  />
         <label className="text-base mb-2 mt-4">
           Age
           </label>
-        <input className="w-80 mb-4 h-8 bg-zinc-700 rounded-md focus:outline-orange-500" type="number" required  />
+        <input className="w-80 mb-4 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500" type="text" pattern="^[0-9]{2,3}$"  required  />
+
+        <select className="w-80 mb-4 mt-4 text-base h-auto bg-zinc-700 rounded-md focus:outline-orange-500" required>
+        <option>Choose Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        </select>
         <button type="submit" className="w-full mt-3  text-lg    border-2 border-solid border-orange-500 p-1 rounded-full text-white font-semibold h-auto transition hover:bg-orange-500"> 
           Sign Up
           </button>
-        
     </form>
        </div>
     </div>

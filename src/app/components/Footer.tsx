@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook,faInstagram, faTiktok, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -14,47 +13,47 @@ const Footer = () => {
         </div>
         <div className="grid grid-cols-2 justify-center items-center">
         <ul className="flex flex-col justify-center items-center  gap-6 ">
-        <li><Link href="/contact" className="hover:text-sky-600">Body Building</Link></li>
-            <li><Link href="/contact" className="hover:text-sky-600">Boxing</Link></li>
+        <li><a href="/contact" className="hover:text-sky-600">Body Building</a></li>
+            <li><a href="/contact" className="hover:text-sky-600">Boxing</a></li>
             <li><a href="/contact" className="hover:text-sky-600">Cardio</a></li>
         </ul>
         <ul className="flex flex-col justify-center items-center   gap-6">
-            <li><Link href="/contact" className="hover:text-sky-600">Kungfu</Link></li>
-            <li><Link href="/contact" className="hover:text-sky-600">Yoga</Link></li>            
-            <li><Link href="/contact" className="hover:text-sky-600">Running</Link></li>
+            <li><a href="/contact" className="hover:text-sky-600">Kungfu</a></li>
+            <li><a href="/contact" className="hover:text-sky-600">Yoga</a></li>            
+            <li><a href="/contact" className="hover:text-sky-600">Running</a></li>
         </ul>
         </div>
         <div className="flex flex-col mr-5" dir='rtl'>
-                <Link href="#" className="mb-5 ">
+                <a href="#" className="mb-5 ">
                                 <FontAwesomeIcon
                  icon={faLocationDot} fill="currentColor" className="icons w-8 h-8 mb-2  transform transition duration-300 hover:scale-125" />
                   <p>First Branch - Al-Hayar St., Abu El Matamir, Beheira</p>
-                </Link>
-                <Link href="#" className="mb-5 ">
+                </a>
+                <a href="#" className="mb-5 ">
                 <FontAwesomeIcon
                  icon={faLocationDot} fill="currentColor" className="icons w-8 h-8 mb-2  transform transition duration-300 hover:scale-125 " />
                    <p>Second Branch - Khamis St., Abu El Matamir, Beheira</p>
-                </Link>
+                </a>
           </div>
           </div>
 
           <div className="flex justify-center gap-10 mt-5">
-              <Link href="https://www.facebook.com/Dreamclub.Officiall" target="_blank" aria-label="Visit our Facebook page">
+              <a href="https://www.facebook.com/Dreamclub.Officiall" target="_blank" aria-label="Visit our Facebook page">
               <FontAwesomeIcon
               icon={faFacebook} className="icons w-8 h-8 mb-8 transform transition duration-300 hover:scale-125" />
-              </Link>
-            <Link href="https://wa.me/201064245335"  target="_blank" rel="noopener noreferrer">
+              </a>
+            <a href="https://wa.me/201064245335"  target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon 
             icon={faWhatsapp} fill="currentColor" className="icons w-8 h-8  transform transition duration-300 hover:scale-125" />
-            </Link>
-              <Link href="https://www.instagram.com/dream_club.official?igsh=aWx5ejB6dHV3dnVw" target="_blank">
+            </a>
+              <a href="https://www.instagram.com/dream_club.official?igsh=aWx5ejB6dHV3dnVw" target="_blank">
               <FontAwesomeIcon
               icon={faInstagram}  fill="currentColor"  className="icons w-8 h-8  transform transition duration-300 hover:scale-125"/>
-              </Link>
-              <Link href="http://tiktok.com">
+              </a>
+              <a href="http://tiktok.com">
               <FontAwesomeIcon
                icon={faTiktok} fill="currentColor" className="icons w-8 h-8  transform transition duration-300 hover:scale-125" />
-              </Link>
+              </a>
           </div>
           <p className="text-center text-xl p-5">All rights reserved by @ Team P9</p>
     </footer>

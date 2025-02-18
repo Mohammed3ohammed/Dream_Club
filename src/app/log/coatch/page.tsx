@@ -6,7 +6,7 @@ const page = () => {
     {
       id: 1,
       name: "Mohamed Ahmed",
-      coach: "Captain Ali Arqoub",
+      coach: "Captain Ali Al-Qasabi",
       startDate: "2025-01-01",
       endDate: "2025-02-01",
       status: "Active",
@@ -28,7 +28,6 @@ const page = () => {
       status: "Active",
     },
   ];
-
 
   const filteredSubscribers = subscribers.filter(
     (subscriber) => subscriber.coach === coachName
@@ -76,7 +75,7 @@ const page = () => {
         </div>
       ) : (
         <p className="text-center text-lg">No member data available.</p>
-      )};
+      )}
     </div>
   );
 };

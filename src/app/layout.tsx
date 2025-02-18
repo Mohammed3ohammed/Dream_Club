@@ -22,7 +22,9 @@ export const metadata: Metadata = {
   title: "Dream Club",
   description:
    "A user-friendly gym website offering personalized workout plans, expert trainers, and easy booking. Tailored to help you achieve your fitness goals, track progress, and embrace a healthier lifestyle.",
- 
+   icons: {
+    icon: "/Image/logo.jpg", 
+  },
 };
 
 export default function RootLayout({
@@ -41,4 +43,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
