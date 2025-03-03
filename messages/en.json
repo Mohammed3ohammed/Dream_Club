@@ -1,0 +1,290 @@
+
+{
+    "Navbar": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "workout": "Workout Plan",
+      "login": "Log In",
+      "signup": "Sign Up",
+      "menuToggle": "Toggle Menu"
+    }, 
+
+    "HomePage": {
+
+        "titleCard": "WEIGHT LIFTING",
+         "card": "Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.",
+        "description": "A dedicated fitness expert with a passion for helping individuals achieve their health and wellness goals through tailored workout plans, nutrition guidance, and motivational coaching.",
+        "titleCard2": "Cardio",
+        "card2": "Cardio exercises, like running, are essential for improving heart health, burning calories, and boosting overall energy levels.",
+        "titleCard3": "Injury Rehabilitation",
+        "card3": "Injury rehabilitation involves a series of exercises and treatments to restore strength, flexibility, and function after an injury, helping to prevent future issues.",
+        "titleCard4": "Running",
+        "card4": "Running offers numerous benefits, including improved cardiovascular health, increased stamina, and enhanced mental well-being.",
+        "button": "More",
+        "products": {
+    "product1": "Mass",
+    "product2": "Whey Protein Supplement",
+    "product3": "ON Creatine",
+    "product4": "Red Rex Creatine",
+    "product5": "Creatine",
+    "product6": "Shaker",
+    "product7": "Shaker",
+    "product8": "Back Belt",
+    "product9": "Men’s Gym Gloves",
+    "product10": "Women’s Gym Gloves",
+    "product11": "Kung Fu Gloves",
+    "product12": "Kung Fu Gloves",
+    "product13": "Injury Rehabilitation Belt",
+    "product14": "Foot Guard",
+    "product15": "Head Guard",
+    "product16": "Mineral Water"
+}
+
+    },
+
+    "About": {
+          "title": "Why Join the Dream Club?",
+          "description": " A place that will change your life and help you achieve your health and fitness goals in a fun and professional way. When you join us, you ll benefit from:",
+          "equipment": "State-of-the-art equipment to make your workout easier and more effective.",
+          "professional_team": "A professional team that will support you step by step and guide you in the best way.",
+          "variety": "Whether you love weightlifting, cardio, or even Zumba and yoga, we have something for you.",
+          "comfortable_space": "A well-designed space to make you feel comfortable and motivated to become the best version of yourself.",
+          "community": "You’ll meet like-minded people who share your goals and will encourage you to succeed.",
+          "join": "With Dream Club, your journey to health and happiness starts here. Join now! 🚀"
+            },
+
+    "Service": {
+              "coatch1": {
+                  "name": "Captain Assem El-Kasaby",
+                  "study":"Faculty of Physical Education, Cairo University",
+                  "description": "Specialist in sports injury rehabilitation and Kung Fu training, with extensive experience in the field. I provide customized rehabilitation programs that help restore fitness and flexibility after injuries while improving physical performance in a safe and effective manner. I also focus on developing combat skills in Kung Fu at a professional level through modern training plans designed to achieve the best results and ensure continuous progress."
+                },
+                  
+              "coatch2": {
+                  "name": "Captain Ali El-Kasaby",
+                  "study": "Faculty of Physical Education, Cairo University",
+                  "description": "Specialist in designing personalized training programs aimed at achieving your fitness and health goals. With years of experience in the fitness industry, I create customized workout plans tailored to each individual’s needs, whether you're looking to lose weight, build muscle, or improve overall fitness. I believe that fitness is not just about physical appearance but a lifestyle that enhances energy and confidence. By combining the latest training techniques with a healthy and balanced diet, I ensure sustainable results."
+                },
+                  
+               "coatch3": {
+                  "name": "Captain Mohamed El-Kasaby",
+                  "study":"Faculty of Physical Education, Beni Suef University",
+                  "description": "Specialist in creating customized training plans tailored to your fitness and health needs. With years of experience in the fitness industry, I design comprehensive workout programs, whether your goal is weight loss, muscle gain, or overall physical improvement. I strive to make fitness a part of your lifestyle, providing you with more energy and greater confidence through modern training methods and a balanced nutrition plan to achieve effective and sustainable results."
+                },
+                  
+               "coatch4": {
+                  "name": "Captain Fares El-Monakhly",
+                  "study": "Faculty of Physical Education, Cairo University",
+                  "description": "I help you achieve your fitness goals through personalized training programs tailored specifically for you. Whether you aim to improve your physical performance, lose weight, or build strength and endurance, I will create a workout plan that matches your abilities and supports your progress in a balanced way. I believe that fitness is not just about exercise but a lifestyle that enhances your health and confidence. That's why I focus on providing a comprehensive training approach that combines the latest fitness techniques with proper nutritional guidance to ensure lasting results."
+                },
+                  
+               "coatch5": {
+                  "name": "Captain Raneem Kamal",
+                  "study": "Faculty of Physical Education, Helwan University",
+                  "description": "A specialist in designing personalized training programs to help you achieve your fitness goals with confidence and strength. Whether you want to improve your fitness, tone your body, or build strength and endurance, I will create a tailored training plan based on your needs. I believe that exercise provides energy and confidence, so I focus on offering diverse workouts and modern training techniques to ensure continuous progress and lasting results."
+                },
+                  
+               "coatch6": {
+                  "name": "Captain Alaa El-Abd",
+                  "study": "Faculty of Physical Education, Alexandria University",
+                  "description": "A specialist in fitness and personal training, I help you achieve a balance between exercise and health in a fun and effective way. Whether your goal is weight loss, body sculpting, or improving your overall fitness, I will provide a tailored training plan that fits your lifestyle and supports your progress. I focus on making workouts enjoyable and motivating while incorporating proper nutrition to ensure the best results in a healthy and sustainable way."
+                },
+                "button": "Subscribe Now"
+                
+              },
+
+              "Coatchs": {
+              "Coatch1": {
+                "title": "Subscribe With Us Now",
+                "result": "Now to Achieve the Best Result",
+                "name": "Training Program - Captain Assem El-Kasaby",
+                "description": "Specialist in sports injury rehabilitation and professional Kung Fu training.",
+                "physica": "Physical Rehabilitation",
+                "fitness": "Fitness and flexibility recovery exercises",
+                "strength": "Strength training and performance enhancement",
+                "physical": "Physical therapy techniques and injury prevention",
+                "combat": "Combat Skills Development",
+                "advanced": "Advanced Kung Fu training programs",
+                "improving": "Improving speed and reaction time",
+                "combatt": "Combat tactics and fight endurance training",
+                "gym_plan": "Subscription Price Kung Fu",
+                "quarterly": "Kung Fu (15+ Years) - 400 EGP",
+                "monthly": "Kung Fu (Ages 4-14) - 300 EGP",
+                "gymnastics": "Gymnastics (Ages 4-7) - 200 EGP",
+              "Spa": {
+                "spaa": "-- Spa --",
+                "sauna": "Sauna Session - 50 EGP",
+                "jacuzzi": "Jacuzzi Session - 100 EGP",
+                "ice-jacuzzi": "Ice Jacuzzi Session - 120 EGP",
+                "back-massage": "Back Massage Session - 300 EGP",
+                "full-massage": "Full Body Massage Session - 300 EGP",
+                "cupping": "Cupping Therapy Session - 350 EGP",
+                "massage": "Massage + Cupping Session - 450 EGP"
+              }
+              },
+              "coatch2": {
+                "title": "Subscribe With Us Now",
+                "result": "To Achieve the Best Results",
+                "name": "Professional Training Program - Captain Ali El-Kasaby",
+                "description": "Specialist in designing personalized training programs aimed at achieving your fitness and health goals.",
+                "customized": "Customized Workout Plans",
+                "weight": "Weight Loss and Fat Burning Programs",
+                "muscle": "Muscle Building and Strength Training",
+                "fitness": "Overall Fitness and Endurance Improvement",
+                "holistic": "Holistic Fitness Approach",
+                "latest": "Combining the Latest Training Techniques",
+                "nutrition": "Balanced and Healthy Nutrition Guidance",
+                "energy": "Enhancing Energy Levels and Confidence",
+                "gym_plan": "Subscription Price",
+                "mens_gym": "-- Men's Gym --",
+                "monthly": "Monthly - 700 EGP",
+                "quarterly": "Gym 3 Days a Week - 500 EGP"
+              },
+              "coatch3": {
+                "title": "Subscribe With Us Now",
+                "result": "Now to Achieve the Best Result",
+                "name": "Professional Training Program - Captain Mohamed El-Kasaby",
+                "description": " Specialist in creating customized training plans tailored to your fitness and health needs.",
+                "customized": "Comprehensive Workout Programs",
+                "weight": "Weight loss and fat burning strategies",
+                "muscle": "Muscle gain and strength development",
+                "fitness": "Overall physical improvement and endurance",
+                "holistic": "Sustainable Fitness Approach",
+                "latest": "Utilizing modern training methodologies",
+                "nutrition": "Personalized balanced nutrition guidance",
+                "energy": "Boosting energy levels and self-confidence",
+                "gym_plan": "Subscription Price",
+                "mens_gym": "-- Men's Gym --",
+                "monthly": "Monthly - 700 EGP",
+                "quarterly": "Gym 3 Days a Week - 500 EGP"
+              },
+              "coatch4": { 
+                        "title": "Subscribe With Us Now",
+                        "result": "Now to Achieve the Best Result",
+                        "name": "Professional Training Program - Captain Fares El-Monakhly",
+                        "description": "I help you achieve your fitness goals through personalized training programs tailored specifically for you.",
+                        "customized": "Personalized Training Approach",
+                        "weight": "Weight loss and muscle-building strategies",
+                        "muscle": "Improving physical performance and endurance",
+                        "fitness": "Balanced and progressive fitness training",
+                        "holistic": "Comprehensive Fitness Strategy",
+                        "latest": "Latest fitness techniques for optimal results",
+                        "nutrition": "Customized nutritional guidance",
+                        "energy": "Enhancing confidence and overall health",
+                        "gym_plan": "Subscription Price",
+                        "mens_gym": "-- Men's Gym --",
+                        "monthly": "Monthly - 500 EGP",
+                        "quarterly": "Gym 3 Days a Week - 350 EGP"
+                        },
+                      "coatch5": { 
+                        "title": "Subscribe With Us",
+                        "result": "Now to Achieve the Best Result",
+                        "name": "Professional Training Program - Captain Raneem Kamal",
+                        "description": "A specialist in designing personalized training programs to help you achieve your fitness goals with confidence and strength.",
+                        "customized": "Customized Training Plans",
+                        "fitness": "Fitness improvement and body toning",
+                        "strength": "Strength and endurance building",
+                        "workout": "Personalized workout programs for continuous progress",
+                        "modern": "Modern Training Approach",
+                        "diverse": "Diverse and effective workout routines",
+                        "techniques": "Utilizing modern training techniques",
+                        "energy": "Boosting energy levels and self-confidence",
+                        "gym_plan": "Subscription Price",
+                        "monthly": "Monthly - 500 EGP",
+                        "quarterly": "Gym 3 Days a Week - 350 EGP",
+                        "personalized": "Personalized Training - 350 EGP"
+                        },
+                        "coatch6": { 
+                        "title": "Subscribe With Us",
+                        "result": "Now to Achieve the Best Result",
+                        "name": "Professional Training Program - Captain Alaa El-Abd",
+                        "description": "A specialist in fitness and personal training, I help you achieve a balance between exercise and health in a fun and effective way.",
+                        "customized": "Tailored Training Programs",
+                        "fitness": "Weight loss and body sculpting",
+                        "strength": "Strength and endurance building",
+                        "workout": "Improving overall fitness and flexibility",
+                        "modern": "Comprehensive Fitness Approach",
+                        "diverse": "Making workouts enjoyable and motivating",
+                        "techniques": "Utilizing modern training techniques",
+                        "energy": "Boosting energy levels and self-confidence",
+                        "gym_plan": "Subscription Price",
+                        "monthly": "Monthly - 500 EGP",
+                        "quarterly": "Gym 3 Days a Week - 350 EGP",
+                        "personalized": "Personal Training - 700 EGP"
+                        }
+                        },
+
+                "Workout": {
+                "gymSchedule": {
+                  "title": "Gym Schedule",
+                  "thead": "Women s Schedule",
+                  "thead1": "Men s Schedule",
+                  "thead2": "Day",
+                  "schedule": [
+                    { "day": "Saturday", "men": "6:00 PM - 1:00 AM", "women": "1:00 PM - 6:00 PM" },
+                    { "day": "Sunday", "men": "2:00 PM - 1:00 AM", "women": "8:00 AM - 2:00 PM" },
+                    { "day": "Monday", "men": "6:00 PM - 1:00 AM", "women": "1:00 PM - 6:00 PM" },
+                    { "day": "Tuesday", "men": "2:00 PM - 1:00 AM", "women": "8:00 AM - 2:00 PM" },
+                    { "day": "Wednesday", "men": "6:00 PM - 1:00 AM", "women": "1:00 PM - 6:00 PM" },
+                    { "day": "Thursday", "men": "2:00 PM - 2:00 AM", "women": "8:00 AM - 2:00 PM" },
+                    { "day": "Friday", "men": "Closed", "women": "2:00 PM - 6:00 PM" }
+                ],
+                "table1": "Push Pull Legs Schedule",
+                "table2": "Fitness Workout Schedule",
+                "table3": "Injury Rehabilitation Schedule",
+                "table4": "Kung Fu Training Schedule"
+                },
+              "button": "Subscribe Now"
+              },
+
+              "Login": {
+                        "title": "Login in to Dream Club !",
+                        "email": "Email",
+                        "phone": "Phone",
+                        "password": "Password",
+                        "button": "Login in",
+                        "create": "Create on account ?"
+              },
+
+              "Signup": {
+                "title": "Create Account",
+                "paragraph": "Start Your Fitness Journey",
+                "name": "Full Name",
+                "email": "Email",
+                "phone": "Phone Number",
+                "password": "Password",
+                "weight": "Weight (kg)",
+                "height": "Height (cm)",
+                "age": "Age",
+                "gender": "Gender",
+                "male": "Male",
+                "female": "Female",
+                "button": "Sign Up",
+                "success_message": "Registration Successful!",
+                "validation_error": "Validation Errors:",
+                "error_message": "Registration Failed!",
+                "unknown_error": "An Unknown Error Occurred!",
+                "phone_validation": "Phone number must be 11 digits",
+                "password_validation": "Password must be 8-12 characters"
+              },
+    
+
+    "Footer": {
+            "description": "A place that will change your life and help you achieve your health and fitness goals in an enjoyable and professional way.",
+            "categories": {
+                          "body": "Body Building",
+                          "boxing": "Boxing",
+                          "cardio": "Cardio",
+                          "kungfu": "Kungfu",
+                          "yoga": "Yoga",
+                          "running": "Running"
+                            },
+            "branches": {
+            "first": "First Branch - Al-Hayar St., Abu El Matamir, Beheira",
+            "second": "Second Branch - Khamis St., Abu El Matamir, Beheira"
+          },
+           "rights": "All rights reserved by @ Team P9"
+    }
+   }
+  
