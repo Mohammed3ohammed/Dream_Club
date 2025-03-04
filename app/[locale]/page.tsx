@@ -75,7 +75,7 @@ const  Home = () => {
           <Image src={card.img} alt={`logo`} className="w-16 h-16" />
           <h1 className="border-b-2 border-solid border-orange-500 p-3">{t(card.title)}</h1>
           <p className="p-6">{t(card.desc)}</p>
-          <Link href="/contact">
+          <Link href="/workout">
             <button className="flex border-2 border-solid p-2 rounded-full border-orange-500 text-orange-500 w-32 m-auto transition hover:bg-orange-500 hover:text-white">
               {t("button")} <FontAwesomeIcon icon={faArrowRight} className="size-6 ml-4 w-4 h-4" />
             </button>
