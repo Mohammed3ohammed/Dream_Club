@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import logo from "../../../public/Captins/Image3.jpg";
-import { Link } from '../../../i18n/routing';
 import { useTranslations } from 'next-intl';
 
 
