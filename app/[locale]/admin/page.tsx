@@ -7,7 +7,7 @@ import axios from "axios";
 import logo from "../../../Image/Mange.jpg";
 import { useRouter } from "../../../i18n/routing";
 
-// Define types for coaches and clients
+
 type Coach = {
   id: number;
   name: string;
@@ -59,11 +59,31 @@ const Page = () => {
       .catch((err) => console.error(err));
   };
 
-   const router = useRouter();
-  const handleLogout = () => {
-    localStorage.removeItem("token"); // مسح التوكن أو أي بيانات مخزنة
-    router.push("/log");  // توجيه المستخدم لصفحة تسجيل الدخول
+const router = useRouter();
+const handleLogout = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+      if (!response.ok) {
+        throw new Error("Logout failed");
+      }
+      const data = await response.json();
+      console.log(data.message);
+    } catch (error) {
+      console.error("Error logging out:", error);
+    } finally {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      localStorage.removeItem("extra_data");
+      router.push("/log");
+    }
   };
+
 
   return (
     <div className="p-8 min-h-screen">
@@ -71,7 +91,7 @@ const Page = () => {
       <Image
         src={logo}
         alt="logo"
-        className="w-32 h-32 mx-auto rounded-full transform translate-y-1/2"
+        className="w-52 h-52 mx-auto rounded-full transform translate-y-1/2"
       />
 
       {/* Coaches Section */}
@@ -106,7 +126,6 @@ const Page = () => {
         </tbody>
       </table>
 
-      {/* Clients Section */}
       <div className="flex justify-between items-center mt-20 mb-4">
         <h2 className="text-xl font-semibold">Clients List</h2>
         <button
@@ -138,7 +157,6 @@ const Page = () => {
         </tbody>
       </table>
 
-      {/* Add Coach Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white text-black p-6 rounded-lg w-96">
@@ -161,7 +179,7 @@ const Page = () => {
         </div>
       )}
 
-      {/* Add Client Modal */}
+
       {isClientModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white text-black p-6 rounded-lg w-96">
@@ -183,9 +201,12 @@ const Page = () => {
           </div>
         </div>
       )}
-          <button onClick={handleLogout} className="px-4 py-2 mt-14 bg-red-500 text-white rounded-md">
-      Logout
-    </button>
+              <button
+        onClick={handleLogout}
+        className="px-4 py-2 mt-14 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+      >
+        Logout
+      </button>
     </div>
   );
 };

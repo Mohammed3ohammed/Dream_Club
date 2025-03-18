@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "../../../i18n/routing";
@@ -15,14 +14,33 @@ interface Subscriber {
 const Page = () => {
   const [subscribers, setSubscribers] = useState<Subscriber[]>([]);
   const [newPlayer, setNewPlayer] = useState({ playerName: "", trainingType: "" });
-
-   const router = useRouter();
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    router.push("/log");  
+  const router = useRouter();
+  
+  const handleLogout = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+      if (!response.ok) {
+        throw new Error("Logout failed");
+      }
+      const data = await response.json();
+      console.log(data.message);
+    } catch (error) {
+      console.error("Error logging out:", error);
+    } finally {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      localStorage.removeItem("extra_data");
+      router.push("/log");
+    }
   };
 
-  // Fetch subscribers with authentication
+
   useEffect(() => {
     const token = localStorage.getItem("token"); 
 
@@ -39,12 +57,11 @@ const Page = () => {
       .catch((error) => console.error("Error fetching subscribers", error));
   }, []);
 
-  // Handle input change
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setNewPlayer({ ...newPlayer, [e.target.name]: e.target.value });
   };
 
-  // Add new player with authentication
   const addPlayer = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -56,10 +73,10 @@ const Page = () => {
       const requestData = {
         type: newPlayer.trainingType,
         player: newPlayer.playerName,
-        spa: true, // افتراضيًا مفعّل
-        kong_fo: false, // افتراضيًا غير مفعّل
-        price: 150.5, // سعر افتراضي
-        sessions: 10, // عدد الجلسات الافتراضي
+        spa: true, 
+        kong_fo: false, 
+        price: 150.5, 
+        sessions: 10, 
         status: "active",
       };
 
@@ -73,11 +90,11 @@ const Page = () => {
     }
   };
 
+  
+
   return (
     <div className="p-8 min-h-screen">
       <h1 className="text-4xl font-bold mb-8 text-center">Coach Dashboard</h1>
-
-      {/* Add Player Form */}
       <div className="mb-8">
         <input
           type="text"
@@ -131,9 +148,12 @@ const Page = () => {
           ))}
         </tbody>
       </table>
-      <button onClick={handleLogout} className="px-4 py-2 mt-14 bg-red-500 text-white rounded-md">
-      Logout
-    </button>
+      <button
+        onClick={handleLogout}
+        className="px-4 py-2 mt-14 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+      >
+        Logout
+      </button>
     </div>
   );
 };

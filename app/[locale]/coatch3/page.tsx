@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useTranslations } from 'next-intl';
 import logo from "../../../public/Captins/Image4.jpg";
+import { useRouter } from '../../../i18n/routing';
 
 interface ProgramData {
   subscription_id: number;
@@ -23,6 +24,7 @@ const Page = () => {
   const [plan, setPlan] = useState("");
   const [programs, setPrograms] = useState<ProgramData[]>([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchPrograms = async () => {
@@ -51,12 +53,12 @@ const Page = () => {
     try {
       const token = localStorage.getItem("token");
       if (!token) {
-        alert("يرجى تسجيل الدخول أولًا قبل الاشتراك!");
+        alert("Please log in first before subscribing! 🔒");
         return;
       }
 
       if (!plan) {
-        alert("يرجى اختيار خطة الاشتراك!");
+        alert("Please choose a subscription plan! 📅");
         return;
       }
 
@@ -71,11 +73,11 @@ const Page = () => {
         }
       );
 
-      alert("تم الاشتراك مع الكابتن بنجاح!");
-      window.location.reload();
+      alert("Successfully subscribed with the coach! ✅");
+      router.push("/client");
     } catch (error: unknown) {
       console.error("Subscription Error:", error);
-      alert("حدث خطأ أثناء الاشتراك!");
+      alert("An error occurred during subscription! ❌");
     }
   };
 

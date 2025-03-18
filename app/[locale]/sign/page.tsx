@@ -3,6 +3,7 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
 import { useTranslations } from 'next-intl';
 import axios from 'axios';
+
 import { useRouter } from "../../../i18n/routing";
 
 interface FormData {
@@ -19,6 +20,7 @@ interface FormData {
 const SignUp = () => {
   const t = useTranslations("Signup");
   const router = useRouter();
+    const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -34,6 +36,8 @@ const SignUp = () => {
     setFormData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
   };
 
+  
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     console.log("Submitting form with data:", formData);
@@ -43,13 +47,13 @@ const SignUp = () => {
         headers: { "Content-Type": "application/json" },
       });
       console.log("Success:", data);
-      alert("Registration successful!");
+      alert("Registration successful! 🎉✅");
       localStorage.setItem("playerData", JSON.stringify(data.user));
       router.push(`/client`);
       setFormData({ name: "", email: "", phone: "", password: "", weight: "", height: "", age: "", gender: "" });
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred during registration!");
+      alert("An error occurred during registration! ❌⚠️");
     }
   };
 
@@ -63,13 +67,13 @@ const SignUp = () => {
             <div key={field} className="mb-4">
               <label className="text-base mb-2 block">{t(field)}</label>
               <input
-                type={field === "password" ? "password" : "text"}
-                name={field}
-                value={formData[field as keyof FormData]}
-                onChange={handleChange}
-                required
-                className="w-80 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500"
-              />
+              type={showPassword ? "text" : "password"}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+              className="w-full mb-4 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500 pr-10"
+            />
             </div>
           ))}
           <label className="text-base mb-2 block">{t("gender")}</label>
