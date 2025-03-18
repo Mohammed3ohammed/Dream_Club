@@ -1,22 +1,55 @@
 "use client";
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useTranslations } from 'next-intl';
 import logo from "../../../public/Captins/Image4.jpg";
 
+interface ProgramData {
+  subscription_id: number;
+  program_id: number;
+  program_type: string;
+  program_price: string;
+  program_sessions: number;
+  coach_name: string;
+  status: string;
+  start_date: string;
+  end_date: string;
+}
+
+
 const Page = () => {
   const t = useTranslations("Coatchs");
   const [plan, setPlan] = useState("");
+  const [programs, setPrograms] = useState<ProgramData[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // دالة الاشتراك مع الكابتن
+  useEffect(() => {
+    const fetchPrograms = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        if (!token) return;
+
+        const response = await axios.get("http://localhost:8000/api/client/myPrograms", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+
+        setPrograms(response.data.programs);
+      } catch (error) {
+        console.error("Error fetching programs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPrograms();
+  }, []);
+
   const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
       const token = localStorage.getItem("token");
-      console.log("Token:", token); // ✅ طباعة التوكن للتأكد
-
       if (!token) {
         alert("يرجى تسجيل الدخول أولًا قبل الاشتراك!");
         return;
@@ -27,43 +60,22 @@ const Page = () => {
         return;
       }
 
-      // ✅ إرسال `program_id` مع بيانات الاشتراك
       await axios.post(
         "http://localhost:8000/api/client/subscribe",
-        { 
-          plan,
-          program_id: 3 // ✅ إضافة `program_id` الخاص بالكابتن الثالث
-        }, 
+        { plan, program_id: 3},
         {
           headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`, 
+            Authorization: `Bearer ${token}`,
           },
         }
       );
 
       alert("تم الاشتراك مع الكابتن بنجاح!");
-
-      // تحديث بيانات اللاعب في localStorage
-      const storedData = localStorage.getItem("playerData");
-      if (storedData) {
-        const player = JSON.parse(storedData);
-        player.captainSubscribed = true;
-        localStorage.setItem("playerData", JSON.stringify(player));
-      }
+      window.location.reload();
     } catch (error: unknown) {
       console.error("Subscription Error:", error);
-
-      if (axios.isAxiosError(error)) {
-        console.error("Response Data:", error.response?.data);
-        if (error.response?.status === 401) {
-          alert("الجلسة انتهت، يرجى تسجيل الدخول مرة أخرى.");
-        } else {
-          alert(`حدث خطأ: ${error.response?.data?.message || "يرجى المحاولة مرة أخرى!"}`);
-        }
-      } else {
-        alert("حدث خطأ أثناء الاشتراك مع الكابتن!");
-      }
+      alert("حدث خطأ أثناء الاشتراك!");
     }
   };
 
@@ -121,6 +133,38 @@ const Page = () => {
           <div className='flex justify-center items-center relative'>
             <Image src={logo} alt="logo" className='w-80 h-96 rounded-2xl transform transition duration-300 hover:scale-105 animate-bounceLight cursor-pointer' />
           </div>
+        </div>
+        <div className="mt-16 p-8 bg-gray-800 text-white rounded-lg">
+          <h2 className="text-3xl font-bold mb-4">Your Subscribed Programs</h2>
+          {loading ? (
+            <p>Loading...</p>
+          ) : programs.length > 0 ? (
+            programs.map((program) => (
+              <div key={program.subscription_id} className="bg-gray-700 p-4 rounded-lg mb-4">
+                <h3 className="text-2xl font-semibold">{program.coach_name}</h3>
+                <p>
+                  <strong>Type:</strong> {program.program_type}
+                </p>
+                <p>
+                  <strong>Sessions:</strong> {program.program_sessions}
+                </p>
+                <p>
+                  <strong>Price:</strong> {program.program_price} EGP
+                </p>
+                <p>
+                  <strong>Status:</strong> {program.status}
+                </p>
+                <p>
+                  <strong>Start Date:</strong> {program.start_date}
+                </p>
+                <p>
+                  <strong>End Date:</strong> {program.end_date}
+                </p>
+              </div>
+            ))
+          ) : (
+            <p>You have not subscribed to any program yet.</p>
+          )}
         </div>
       </div>
     </>
