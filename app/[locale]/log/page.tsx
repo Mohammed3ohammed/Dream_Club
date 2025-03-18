@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import axios from "axios"; 
+import axios from "axios";
 import { useTranslations } from "next-intl";
 import { Link, useRouter } from "../../../i18n/routing";
+import { Eye, EyeOff } from "lucide-react";
 
 const LogIn = () => {
   const t = useTranslations("Login");
@@ -10,6 +11,7 @@ const LogIn = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,17 +23,31 @@ const LogIn = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:8000/api/login", formData);
+      const response = await axios.post("http://localhost:8000/api/login", formData, {
+        headers: { "Cache-Control": "no-cache" },
+      });
 
       if (response.data.token) {
-        localStorage.setItem("token", response.data.token);
-        router.push("/client"); 
+        const { token, user, extra_data } = response.data;
+
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("extra_data", JSON.stringify(extra_data));
+
+        if (user.email === "admin@gmail.com") {
+          router.push("/admin");
+        } else if (user.role === "coach") {
+          router.push("/coach");
+        } else {
+          router.push("/client");
+        }
       } else {
         setError("Login failed!");
       }
     } catch (err) {
+      console.error("Login Error:", err);
       if (axios.isAxiosError(err)) {
-        setError(err.response?.data?.message || "Login failed!");
+        setError("Login failed!");
       } else {
         setError("Network error, please try again.");
       }
@@ -52,17 +68,28 @@ const LogIn = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-80 h-8 bg-zinc-700 rounded-md focus:outline-orange-500"
+            className="w-80 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500"
           />
           <label className="text-base mb-2 mt-4">{t("password")}</label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-            className="w-80 mb-4 h-8 bg-zinc-700 rounded-md focus:outline-orange-500"
-          />
+
+          <div className="relative w-80">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+              className="w-full mb-4 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500 pr-10"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-2 top-4 transform -translate-y-1/2 text-gray-400 hover:text-white"
+            >
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
+          </div>
+
           {error && <p className="text-red-500 text-sm mb-2">{error}</p>}
           <button
             type="submit"
@@ -72,7 +99,7 @@ const LogIn = () => {
             {loading ? "Logging in..." : t("button")}
           </button>
         </form>
-        <Link href="/sign" className=" text-lg text-orange-500 sm:text-lg">
+        <Link href="/sign" className="text-lg text-orange-500 sm:text-lg">
           {t("create")}
         </Link>
       </div>

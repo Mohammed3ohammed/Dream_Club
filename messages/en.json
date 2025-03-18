@@ -212,7 +212,8 @@
                         "monthly": "Monthly - 500 EGP",
                         "quarterly": "Gym 3 Days a Week - 350 EGP",
                         "personalized": "Personal Training - 700 EGP"
-                        }
+                        },
+                         "button": "button"
                         },
 
                 "Workout": {
@@ -238,6 +239,39 @@
               "button": "Subscribe Now"
               },
 
+"Coatch": {
+  "title": "Dashboard Captain Ali Al-Qasabi",
+  "subscribers": [
+    {
+      "id": 1,
+      "name": "Mohamed Ahmed",
+      "coach": "Captain Ali Al-Qasabi",
+      "startDate": "2025-01-01",
+      "endDate": "2025-02-01",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Ahmed Hassan",
+      "coach": "Captain Assem Al-Qasabi",
+      "startDate": "2025-01-05",
+      "endDate": "2025-02-05",
+      "status": "Expired"
+    },
+    {
+      "id": 3,
+      "name": "Ali Youssef",
+      "coach": "Captain Ali Arqoub",
+      "startDate": "2025-01-10",
+      "endDate": "2025-02-10",
+      "status": "Active"
+    }
+    
+  ],
+  "button": "button"
+},
+
+              
               "Login": {
                         "title": "Login in to Dream Club !",
                         "email": "Email",
