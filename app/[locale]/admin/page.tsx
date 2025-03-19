@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UserPlus } from "lucide-react";
 import axios from "axios";
 import logo from "../../../Image/Mange.jpg";
 import { useRouter } from "../../../i18n/routing";
-
 
 type Coach = {
   id: number;
@@ -22,9 +21,20 @@ type Client = {
   phone: string;
 };
 
+type Subscription = {
+  client_name: string;
+  client_email: string;
+  program_type: string;
+  coach_name: string;
+  subscription_status: string;
+  start_date: string;
+  end_date: string;
+};
+
 const Page = () => {
   const [coaches, setCoaches] = useState<Coach[]>([]);
   const [clients, setClients] = useState<Client[]>([]);
+  const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isClientModalOpen, setIsClientModalOpen] = useState(false);
   const [newCoach, setNewCoach] = useState<Partial<Coach>>({
@@ -38,7 +48,29 @@ const Page = () => {
     phone: "",
   });
 
-  // Fetch Coaches & Clients Data
+  const router = useRouter();
+
+  // Fetch initial data
+  useEffect(() => {
+    const fetchSubscriptions = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/admin/subscriptions",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
+        setSubscriptions(response.data.clients);
+      } catch (error) {
+        console.error("Error fetching subscriptions:", error);
+      }
+    };
+
+    fetchSubscriptions();
+  }, []);
+
   const addCoach = () => {
     axios
       .post("http://127.0.0.1:8000/api/admin/coaches/add", newCoach)
@@ -59,8 +91,7 @@ const Page = () => {
       .catch((err) => console.error(err));
   };
 
-const router = useRouter();
-const handleLogout = async () => {
+  const handleLogout = async () => {
     try {
       const response = await fetch("http://localhost:8000/api/logout", {
         method: "POST",
@@ -69,21 +100,16 @@ const handleLogout = async () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      if (!response.ok) {
-        throw new Error("Logout failed");
-      }
-      const data = await response.json();
-      console.log(data.message);
-    } catch (error) {
-      console.error("Error logging out:", error);
-    } finally {
+      if (!response.ok) throw new Error("Logout failed");
+      
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       localStorage.removeItem("extra_data");
       router.push("/log");
+    } catch (error) {
+      console.error("Error logging out:", error);
     }
   };
-
 
   return (
     <div className="p-8 min-h-screen">
@@ -126,6 +152,7 @@ const handleLogout = async () => {
         </tbody>
       </table>
 
+      {/* Clients Section */}
       <div className="flex justify-between items-center mt-20 mb-4">
         <h2 className="text-xl font-semibold">Clients List</h2>
         <button
@@ -157,6 +184,46 @@ const handleLogout = async () => {
         </tbody>
       </table>
 
+      {/* Subscriptions Section */}
+      <div className="flex justify-between items-center mt-20 mb-4">
+        <h2 className="text-xl font-semibold">Subscriptions List</h2>
+      </div>
+      <table className="table-auto min-w-full border-collapse shadow-lg mb-8">
+        <thead className="bg-white text-black">
+          <tr>
+            <th className="px-4 py-2 text-left">Client Name</th>
+            <th className="px-4 py-2 text-left">Email</th>
+            <th className="px-4 py-2 text-left">Program Type</th>
+            <th className="px-4 py-2 text-left">Coach</th>
+            <th className="px-4 py-2 text-left">Start Date</th>
+            <th className="px-4 py-2 text-left">End Date</th>
+            <th className="px-4 py-2 text-left">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {subscriptions.map((subscription, index) => (
+            <tr key={index} className="border-b">
+              <td className="px-4 py-2">{subscription.client_name}</td>
+              <td className="px-4 py-2">{subscription.client_email}</td>
+              <td className="px-4 py-2 capitalize">{subscription.program_type}</td>
+              <td className="px-4 py-2">{subscription.coach_name}</td>
+              <td className="px-4 py-2">{new Date(subscription.start_date).toLocaleDateString()}</td>
+              <td className="px-4 py-2">{new Date(subscription.end_date).toLocaleDateString()}</td>
+              <td className="px-4 py-2">
+                <span className={`px-2 py-1 rounded ${
+                  subscription.subscription_status === 'Active' 
+                    ? 'bg-green-200 text-green-800' 
+                    : 'bg-red-200 text-red-800'
+                }`}>
+                  {subscription.subscription_status}
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Modals */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white text-black p-6 rounded-lg w-96">
@@ -165,20 +232,17 @@ const handleLogout = async () => {
               type="text"
               placeholder="Name"
               className="border w-full p-2 mb-2 rounded"
-              onChange={(e) =>
-                setNewCoach({ ...newCoach, name: e.target.value })
-              }
+              onChange={(e) => setNewCoach({ ...newCoach, name: e.target.value })}
             />
             <button
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
               onClick={addCoach}
             >
-              Add
+              Add Coach
             </button>
           </div>
         </div>
       )}
-
 
       {isClientModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
@@ -188,22 +252,21 @@ const handleLogout = async () => {
               type="text"
               placeholder="Name"
               className="border w-full p-2 mb-2 rounded"
-              onChange={(e) =>
-                setNewClient({ ...newClient, name: e.target.value })
-              }
+              onChange={(e) => setNewClient({ ...newClient, name: e.target.value })}
             />
             <button
-              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 w-full"
               onClick={addClient}
             >
-              Add
+              Add Client
             </button>
           </div>
         </div>
       )}
-              <button
+
+      <button
         onClick={handleLogout}
-        className="px-4 py-2 mt-14 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+        className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition shadow-lg"
       >
         Logout
       </button>
