@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState, FormEvent, ChangeEvent } from "react";
-import { useTranslations } from 'next-intl';
-import axios from 'axios';
-
+import { useTranslations } from "next-intl";
+import axios from "axios";
 import { useRouter } from "../../../i18n/routing";
 
 interface FormData {
@@ -20,7 +19,6 @@ interface FormData {
 const SignUp = () => {
   const t = useTranslations("Signup");
   const router = useRouter();
-    const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -31,29 +29,65 @@ const SignUp = () => {
     age: "",
     gender: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
   };
 
-  
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setLoading(true);
     console.log("Submitting form with data:", formData);
 
     try {
-      const { data } = await axios.post("http://localhost:8000/api/register", formData, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const { data } = await axios.post(
+        "http://localhost:8000/api/register",
+        formData,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
       console.log("Success:", data);
       alert("Registration successful! 🎉✅");
-      localStorage.setItem("playerData", JSON.stringify(data.user));
+
+      // دمج بيانات user و client_data في كائن واحد
+      const combinedData = {
+        ...data.user,
+        ...data.client_data,
+      };
+
+      // حفظ البيانات المدمجة في localStorage
+      localStorage.setItem("playerData", JSON.stringify(combinedData));
+      localStorage.setItem("token", data.token);
+
       router.push(`/client`);
-      setFormData({ name: "", email: "", phone: "", password: "", weight: "", height: "", age: "", gender: "" });
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred during registration! ❌⚠️");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        password: "",
+        weight: "",
+        height: "",
+        age: "",
+        gender: "",
+      });
+    } catch (error: any) {
+      console.error("Error during registration:", error);
+      if (error.response) {
+        console.error("Response Data:", error.response.data);
+        alert(`Error: ${error.response.data.message || "Something went wrong!"}`);
+      } else if (error.request) {
+        console.error("No response received:", error.request);
+        alert("No response from server!");
+      } else {
+        console.error("Axios error:", error.message);
+        alert("An unexpected error occurred!");
+      }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -67,15 +101,16 @@ const SignUp = () => {
             <div key={field} className="mb-4">
               <label className="text-base mb-2 block">{t(field)}</label>
               <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              className="w-full mb-4 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500 pr-10"
-            />
+                type={field === "password" ? "password" : "text"}
+                name={field}
+                value={formData[field as keyof FormData]}
+                onChange={handleChange}
+                required
+                className="w-full mb-4 h-8 p-2 bg-zinc-700 rounded-md focus:outline-orange-500 pr-10"
+              />
             </div>
           ))}
+
           <label className="text-base mb-2 block">{t("gender")}</label>
           <select
             className="w-80 mb-4 text-base h-auto bg-zinc-700 rounded-md focus:outline-orange-500"
@@ -88,11 +123,13 @@ const SignUp = () => {
             <option value="male">{t("male")}</option>
             <option value="female">{t("female")}</option>
           </select>
+
           <button
             type="submit"
+            disabled={loading}
             className="w-full mt-3 text-lg border-2 border-solid border-orange-500 p-1 rounded-full text-white font-semibold h-auto transition hover:bg-orange-500"
           >
-            {t("button")}
+            {loading ? "Submitting..." : t("button")}
           </button>
         </form>
       </div>

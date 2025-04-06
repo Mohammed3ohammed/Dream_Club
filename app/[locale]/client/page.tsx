@@ -12,6 +12,9 @@ interface PlayerData {
   age: number;
   gender: string;
   role: string;
+  updated_at?: string; 
+  created_at?: string; 
+  user_id?: number; 
 }
 
 interface Program {
@@ -33,39 +36,33 @@ const Page = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    const storedExtraData = localStorage.getItem("extra_data");
 
-    if (storedUser && storedExtraData) {
+    const storedPlayerData = localStorage.getItem("playerData");
+
+    if (storedPlayerData) {
       try {
-        const user = JSON.parse(storedUser);
-        const extraData = JSON.parse(storedExtraData);
-        const combinedData: PlayerData = {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          phone: user.phone,
-          role: user.role,
-          weight: extraData.weight,
-          height: extraData.height,
-          age: extraData.age,
-          gender: extraData.gender,
-        };
-        setPlayer(combinedData);
+        const parsedData = JSON.parse(storedPlayerData);
+        console.log("Parsed Player Data:", parsedData); 
+        setPlayer(parsedData);
       } catch (error) {
-        console.error("Error parsing user data:", error);
+        console.error("Error parsing player data:", error);
       }
+    } else {
+      console.log("No player data found in localStorage");
     }
   }, []);
 
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
+        const token = localStorage.getItem("token");
+        if (!token) throw new Error("No token found. Please log in again.");
+
         const response = await fetch("http://localhost:8000/api/client/myPrograms", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer ${token}`,
           },
         });
         if (!response.ok) {
@@ -100,8 +97,7 @@ const Page = () => {
       console.error("Error logging out:", error);
     } finally {
       localStorage.removeItem("token");
-      localStorage.removeItem("user");
-      localStorage.removeItem("extra_data");
+      localStorage.removeItem("playerData");
       router.push("/log");
     }
   };
@@ -117,13 +113,13 @@ const Page = () => {
       </h1>
       <div className="bg-zinc-800 p-6 rounded-lg shadow-lg mb-8">
         <h2 className="text-2xl font-bold mb-4">Player Information</h2>
-        <p><strong>Name:</strong> {player?.name}</p>
-        <p><strong>Email:</strong> {player?.email}</p>
-        <p><strong>Phone:</strong> {player?.phone}</p>
-        <p><strong>Weight:</strong> {player?.weight} kg</p>
-        <p><strong>Height:</strong> {player?.height} cm</p>
-        <p><strong>Age:</strong> {player?.age}</p>
-        <p><strong>Gender:</strong> {player?.gender}</p>
+        <p><strong>Name:</strong> {player?.name || "N/A"}</p>
+        <p><strong>Email:</strong> {player?.email || "N/A"}</p>
+        <p><strong>Phone:</strong> {player?.phone || "N/A"}</p>
+        <p><strong>Weight:</strong> {player?.weight || "N/A"} kg</p>
+        <p><strong>Height:</strong> {player?.height || "N/A"} cm</p>
+        <p><strong>Age:</strong> {player?.age || "N/A"}</p>
+        <p><strong>Gender:</strong> {player?.gender || "N/A"}</p>
       </div>
 
       {programs.length > 0 && (
