@@ -96,7 +96,7 @@ const LogIn = () => {
             disabled={loading}
             className="w-full mt-3 text-lg border-2 border-solid border-orange-500 p-1 rounded-full text-white font-semibold h-auto transition hover:bg-orange-500"
           >
-            {loading ? "Logging in..." : t("button")}
+            {loading ? "Logging in... 🔃" : t("button")}
           </button>
         </form>
         <Link href="/sign" className="text-lg text-orange-500 sm:text-lg">

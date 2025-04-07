@@ -52,13 +52,11 @@ const SignUp = () => {
       console.log("Success:", data);
       alert("Registration successful! 🎉✅");
 
-      // دمج بيانات user و client_data في كائن واحد
       const combinedData = {
         ...data.user,
         ...data.client_data,
       };
 
-      // حفظ البيانات المدمجة في localStorage
       localStorage.setItem("playerData", JSON.stringify(combinedData));
       localStorage.setItem("token", data.token);
 
