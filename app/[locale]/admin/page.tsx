@@ -50,7 +50,7 @@ const Page = () => {
 
   const router = useRouter();
 
-  // Fetch initial data
+
   useEffect(() => {
     const fetchSubscriptions = async () => {
       try {

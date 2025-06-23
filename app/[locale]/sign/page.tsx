@@ -39,6 +39,7 @@ const SignUp = () => {
     e.preventDefault();
     setLoading(true);
     console.log("Submitting form with data:", formData);
+    
 
     try {
       const { data } = await axios.post(
@@ -52,12 +53,15 @@ const SignUp = () => {
       console.log("Success:", data);
       alert("Registration successful! 🎉✅");
 
-      const combinedData = {
-        ...data.user,
-        ...data.client_data,
-      };
+      // const combinedData = {
+      //   ...data.user,
+      //   ...data.client_data,
+      // };
 
-      localStorage.setItem("playerData", JSON.stringify(combinedData));
+      // localStorage.setItem("playerData", JSON.stringify(combinedData));
+
+      localStorage.setItem("user", JSON.stringify(data.user));
+      localStorage.setItem("extra_data", JSON.stringify(data.client_data));
       localStorage.setItem("token", data.token);
 
       router.push(`/client`);
@@ -72,7 +76,7 @@ const SignUp = () => {
         age: "",
         gender: "",
       });
-    } catch (error: any) {
+    } catch (error) {
       console.error("Error during registration:", error);
       if (error.response) {
         console.error("Response Data:", error.response.data);

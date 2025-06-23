@@ -138,8 +138,8 @@
                 "energy": "Enhancing Energy Levels and Confidence",
                 "gym_plan": "Subscription Price",
                 "mens_gym": "-- Men's Gym --",
-                "monthly": "Monthly - 700 EGP",
-                "quarterly": "Gym 3 Days a Week - 500 EGP"
+                "monthly": "Fitnes",
+                "quarterly": "Weightlifting"
               },
               "coatch3": {
                 "title": "Subscribe With Us Now",
@@ -156,8 +156,8 @@
                 "energy": "Boosting energy levels and self-confidence",
                 "gym_plan": "Subscription Price",
                 "mens_gym": "-- Men's Gym --",
-                "monthly": "Monthly - 700 EGP",
-                "quarterly": "Gym 3 Days a Week - 500 EGP"
+                "monthly": "Fitnes",
+                "quarterly": "Weightlifting"
               },
               "coatch4": { 
                         "title": "Subscribe With Us Now",
@@ -174,8 +174,8 @@
                         "energy": "Enhancing confidence and overall health",
                         "gym_plan": "Subscription Price",
                         "mens_gym": "-- Men's Gym --",
-                        "monthly": "Monthly - 500 EGP",
-                        "quarterly": "Gym 3 Days a Week - 350 EGP"
+                        "monthly": "Fitnes",
+                        "quarterly": "Weightlifting"
                         },
                       "coatch5": { 
                         "title": "Subscribe With Us",
@@ -191,9 +191,8 @@
                         "techniques": "Utilizing modern training techniques",
                         "energy": "Boosting energy levels and self-confidence",
                         "gym_plan": "Subscription Price",
-                        "monthly": "Monthly - 500 EGP",
-                        "quarterly": "Gym 3 Days a Week - 350 EGP",
-                        "personalized": "Personalized Training - 350 EGP"
+                        "monthly": "Fitnes",
+                        "quarterly": "Weightlifting"
                         },
                         "coatch6": { 
                         "title": "Subscribe With Us",
@@ -209,9 +208,8 @@
                         "techniques": "Utilizing modern training techniques",
                         "energy": "Boosting energy levels and self-confidence",
                         "gym_plan": "Subscription Price",
-                        "monthly": "Monthly - 500 EGP",
-                        "quarterly": "Gym 3 Days a Week - 350 EGP",
-                        "personalized": "Personal Training - 700 EGP"
+                        "monthly": "Fitnes",
+                        "quarterly": "Weightlifting"
                         },
                          "button": "Subscribe Now"
                         },

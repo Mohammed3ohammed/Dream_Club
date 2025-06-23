@@ -12,9 +12,9 @@ interface PlayerData {
   age: number;
   gender: string;
   role: string;
-  updated_at?: string; 
-  created_at?: string; 
-  user_id?: number; 
+  updated_at?: string;
+  created_at?: string;
+  user_id?: number;
 }
 
 interface Program {
@@ -36,19 +36,35 @@ const Page = () => {
   const router = useRouter();
 
   useEffect(() => {
+    const storedUserData = localStorage.getItem("user");
+    const storedExtraData = localStorage.getItem("extra_data");
 
-    const storedPlayerData = localStorage.getItem("playerData");
-
-    if (storedPlayerData) {
+    if (storedUserData && storedExtraData) {
       try {
-        const parsedData = JSON.parse(storedPlayerData);
-        console.log("Parsed Player Data:", parsedData); 
-        setPlayer(parsedData);
+        const user = JSON.parse(storedUserData);
+        const extra = JSON.parse(storedExtraData);
+
+        const mergedPlayer: PlayerData = {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          phone: user.phone,
+          role: user.role,
+          weight: extra.weight,
+          height: extra.height,
+          age: extra.age,
+          gender: extra.gender,
+          created_at: user.created_at,
+          updated_at: user.updated_at,
+          user_id: user.user_id,
+        };
+
+        setPlayer(mergedPlayer);
       } catch (error) {
         console.error("Error parsing player data:", error);
       }
     } else {
-      console.log("No player data found in localStorage");
+      console.log("No user or extra_data found in localStorage");
     }
   }, []);
 
@@ -65,9 +81,11 @@ const Page = () => {
             Authorization: `Bearer ${token}`,
           },
         });
+
         if (!response.ok) {
           throw new Error("Failed to fetch programs");
         }
+
         const data = await response.json();
         setPrograms(data.programs || []);
       } catch (error) {
@@ -76,6 +94,7 @@ const Page = () => {
         setLoading(false);
       }
     };
+
     fetchPrograms();
   }, []);
 
@@ -88,16 +107,19 @@ const Page = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
+
       if (!response.ok) {
         throw new Error("Logout failed");
       }
+
       const data = await response.json();
       console.log(data.message);
     } catch (error) {
       console.error("Error logging out:", error);
     } finally {
       localStorage.removeItem("token");
-      localStorage.removeItem("playerData");
+      localStorage.removeItem("user");
+      localStorage.removeItem("extra_data");
       router.push("/log");
     }
   };
@@ -111,6 +133,7 @@ const Page = () => {
       <h1 className="text-4xl font-bold mb-8 text-center text-orange-500">
         Player Profile
       </h1>
+
       <div className="bg-zinc-800 p-6 rounded-lg shadow-lg mb-8">
         <h2 className="text-2xl font-bold mb-4">Player Information</h2>
         <p><strong>Name:</strong> {player?.name || "N/A"}</p>
